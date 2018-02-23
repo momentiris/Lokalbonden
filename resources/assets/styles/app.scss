@@ -1,1 +1,12 @@
 /* WordPlate */
+
+@charset 'UTF-8';
+
+// Third-party libraries and packages.
+// @import 'node_modules/sanitize.css/sanitize';
+
+// Project stylesheets.
+@import 'project/__project';
+
+// Project specific styles.
+@import 'components/__components';
