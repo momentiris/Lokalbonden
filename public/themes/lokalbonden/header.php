@@ -13,6 +13,6 @@
 
     <header>
         <nav role="navigation">
-            <?php wp_nav_menu(['theme_location' => 'primary-menu']); ?>
+            <?php require('templates/navigation.php')?>
         </nav>
     </header>
