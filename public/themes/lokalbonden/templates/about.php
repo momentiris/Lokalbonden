@@ -3,8 +3,8 @@
 Template Name: About
 */
 // Get posts from category.
-// $aboutPosts = get_posts(array('category_name' => 'about'));
-// var_dump($aboutPosts);
+$aboutPosts = get_posts(array('category_name' => 'about'));
+
 
 
 
@@ -16,7 +16,7 @@ Template Name: About
 	<div id="primary" class="content-area">
 		<div id="content" class="site-content" role="main">
 
-
+            <h2 class="name"><?php echo $aboutPosts[0]->post_title; ?></h2>
 
 		</div><!-- #content -->
 	</div><!-- #primary -->
