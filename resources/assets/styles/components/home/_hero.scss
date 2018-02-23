@@ -1,0 +1,25 @@
+.hero_wrap {
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('../../../../../public/themes/lokalbonden/media/hero.jpg');
+  background-size:  cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .home-title {
+    text-align: center;
+    font-family: 'Amatic SC', cursive;
+    color: white;
+    font-size: 100px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.69);
+    width: 500px;
+  }
+}
+
+.home-bridge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
