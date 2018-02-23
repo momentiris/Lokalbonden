@@ -10,24 +10,11 @@
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 </head>
 <body <?php body_class(); ?>>
-
     <header>
         <nav role="navigation">
-<<<<<<< HEAD
+
             <?php require('templates/navigation.php')?>
         </nav>
     </header>
-=======
-            <!-- If we want to use a Hamburger-menu and its onclick-animation:
-            Comment out this section and activate the hamburger.js script in
-            the resources section-->
-
-            <!-- <button class="hamburger hamburger--spin" type="button">
-                <span class="hamburger-box">
-                    <span class="hamburger-inner"></span>
-                </span>
-            </button> -->
-    <?php wp_nav_menu(['theme_location' => 'primary-menu']); ?>
 </nav>
 </header>
->>>>>>> 6c89e54056b940a97afa83a29c4285e91864eb93
