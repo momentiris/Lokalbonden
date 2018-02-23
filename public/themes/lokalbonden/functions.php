@@ -57,3 +57,10 @@ add_filter('excerpt_more', function () {
 add_filter('excerpt_length', function () {
     return 101;
 });
+
+// Needed for woocommerce support (Apparently! Not making any difference)
+// Maybe remove later if not needed
+add_action( 'after_setup_theme', 'woocommerce_support' );
+function woocommerce_support() {
+    add_theme_support( 'woocommerce' );
+}
