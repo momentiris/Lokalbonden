@@ -26,6 +26,7 @@
         "installer-paths": {
             "public/mu-plugins/{$name}": [
               "type:wordpress-muplugin",
+              "wpackagist-plugin/advanced-custom-fields",
               "wpackagist-plugin/woocommerce",
               "wpackagist-plugin/jetpack",
               "wordplate/plate"
