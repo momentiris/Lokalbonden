@@ -8,6 +8,12 @@
 - Copy content of .env.example into a new file called .env in root directory
 - Create your own database with phpMyAdmin using the database configs found in .env
 
+
+## Dev specs
+### Pages
+- Home
+- Butik
+- Om oss
 ## License
 
 [MIT](LICENSE) © 2018
