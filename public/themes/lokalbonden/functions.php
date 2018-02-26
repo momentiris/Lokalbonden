@@ -1,6 +1,7 @@
 <?php
-
 declare(strict_types=1);
+
+
 
 // Register plugin helpers.
 require template_path('library/plate.php');
@@ -63,4 +64,41 @@ add_filter('excerpt_length', function () {
 add_action( 'after_setup_theme', 'woocommerce_support' );
 function woocommerce_support() {
     add_theme_support( 'woocommerce' );
+}
+
+
+/**
+ * Create new post types.
+ *
+ * @return [void]
+ *
+ */
+add_action( 'CPT', 'create_post_type', 10, 2 );
+
+function create_post_type($name, $nameSingular) {
+  register_post_type( $name,
+    array(
+      'labels' => array(
+        'name' => __( $name ),
+        'singular_name' => __( $nameSingular )
+      ),
+      'public' => true,
+      'has_archive' => true,
+    )
+  );
+}
+
+// Requires array of CPTs and executes the loop. See custom_post_types/customposttypes.php.
+require ('custom_post_types/customposttypes.php');
+
+/**
+ * Removes the default textarea section for pages in the
+ * wordpress admin interface.
+ *
+ * @var [???]
+ */
+add_action('init', 'init_remove_support',100);
+function init_remove_support(){
+    $post_type = 'page';
+    remove_post_type_support( $post_type, 'editor');
 }
