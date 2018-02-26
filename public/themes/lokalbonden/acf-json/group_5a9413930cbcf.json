@@ -1,11 +1,11 @@
 {
-    "key": "group_5a940e3b36d82",
-    "title": "HomeTEST",
+    "key": "group_5a9413930cbcf",
+    "title": "testKristian",
     "fields": [
         {
-            "key": "field_5a940e41d1ae5",
-            "label": "testingress",
-            "name": "test1",
+            "key": "field_5a9413b133c9a",
+            "label": "testKristian2",
+            "name": "testkristian1",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -22,9 +22,9 @@
             "maxlength": ""
         },
         {
-            "key": "field_5a940e4cd1ae6",
-            "label": "testinfo",
-            "name": "test2",
+            "key": "field_5a9413d333c9b",
+            "label": "testkris3",
+            "name": "testkris3",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -58,5 +58,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1519653046
+    "modified": 1519653864
 }
