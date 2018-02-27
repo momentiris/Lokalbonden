@@ -3,25 +3,8 @@
 Template Name: About
 */
 
-// Get posts from category.
-$aboutPosts = get_posts(array('category_name' => 'about'));
-
-// var_dump(get_posts('category'=>16));
-// var_dump(get_categories());
-// $aboutPosts = get_posts(array('category_name' => 'about'));
-// var_dump($aboutPosts[1]->post_title ;
-// foreach ( $contactPosts as $post ) : setup_postdata( $post );
-//
-
-
-
-//
-// <?php endforeach;
-// wp_reset_postdata();
-
-
-
-
+// Get custom fields from about page.
+$aboutFields = get_field('about');
 
 ?>
 <?php get_header(); ?>
@@ -31,12 +14,9 @@ $aboutPosts = get_posts(array('category_name' => 'about'));
 	<div id="primary" class="content-area">
 		<div id="content" class="site-content" role="main">
 
+            <h2 class="name"></h2>
 
-            <h2 class="name"><?php echo $aboutPosts[0]->post_title; ?></h2>
-
-            <h1 class="test">TEST</h1>
-
-
+            <h1 class="test"><?php echo $aboutFields ?></h1>
 
 		</div><!-- #content -->
 	</div><!-- #primary -->
