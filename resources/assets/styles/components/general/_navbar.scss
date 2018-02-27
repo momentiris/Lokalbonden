@@ -8,7 +8,7 @@
   justify-content: flex-end;
   align-items: center;
   height: 70px;
-  background-color: rgba($smooth-green, 1);
+  background-color: rgba($light-green, 1);
 
   .menu {
     width: 175px;
@@ -21,8 +21,8 @@
      li, a  {
       padding: 3px 5px;
       font-size: 28px;
-      font-family: 'Roboto', sans-serif;
-      color: white;
+      font-family: $headline;
+      color: $white;
       list-style: none;
       display: inline-block;
       text-decoration: none;
