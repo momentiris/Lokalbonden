@@ -93,14 +93,19 @@ function create_post_type($name, $nameSingular) {
 // Requires array of CPTs and executes the loop. See custom_post_types/customposttypes.php.
 require ('custom_post_types/customposttypes.php');
 
-/**
- * Removes the default textarea section for pages in the
- * wordpress admin interface.
- *
- * @var [???]
- */
-add_action('init', 'init_remove_support',100);
-function init_remove_support(){
-    $post_type = 'page';
-    remove_post_type_support( $post_type, 'editor');
-}
+// Adds custom user role and privileges
+add_role( 'master', __( 'Master' ),
+    array(
+        'read' => true, // true allows this capability
+        'edit_posts' => true, // Allows user to edit their own posts
+        'edit_pages' => true, // Allows user to edit pages
+        'edit_others_posts' => true, // Allows user to edit others posts not just their own
+        'create_posts' => false, // Allows user to create new posts
+        'manage_categories' => false, // Allows user to manage post categories
+        'publish_posts' => true, // Allows the user to publish, otherwise posts stays in draft mode
+        'edit_themes' => false, // false denies this capability. User can’t edit your theme
+        'install_plugins' => false, // User cant add new plugins
+        'update_plugin' => false, // User can’t update any plugins
+        'update_core' => false // user cant perform core updates
+    )
+);

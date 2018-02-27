@@ -3,6 +3,7 @@
 Template Name: Home
 */
 get_header();
+<<<<<<< HEAD
 ?>
 
 <div class="hero_wrap">
@@ -11,30 +12,14 @@ get_header();
 // $ingress = get_field('ingress');
 $image = get_field('bakgrundsbild');
 $size = 'full'; // (thumbnail, medium, large, full or custom size)
+=======
+>>>>>>> b7cff20d4b1863e2690d3b1f803c40c65d0d9eef
 
-if( $image ) {
+$fields = get_fields();
+$image = $fields['background_image_1'];
 
-	echo wp_get_attachment_image( $image, $size );
+?>
 
-}
-echo '<br>';
-echo '<br>';
-echo '<br>';
-echo '<br>';
-echo '<br>';
-echo '<br>';
-var_dump($image['url']);
+<div class="hero_wrap" style="background-image: url('<?php echo $image['sizes']['large'] ?>'">
 
-    // Loops the posts with our defined search parameters
-    // foreach ( $ingress as $items ) : setup_postdata( $items ); ?>
-
-    <!-- <h1 class="home-title"><?php //echo $ingress ?></h1> -->
-              <!-- Get post content -->
-<!-- <?php //endforeach; -->
-
-    // Resets post searching parameters to default
-    // wp_reset_postdata();?>
-</div>
-<div class="home-bridge">
-    <h2>En familjär matkasse</h2>
-</div>
+    <h1 class="home-title"><?php echo $fields['header_text'] ?></h1>
