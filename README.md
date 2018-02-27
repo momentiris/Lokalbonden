@@ -11,9 +11,10 @@
 
 ## Dev specs
 ### Pages
-- Home
-- Butik
+- Hem
 - Om oss
+- Butik
+
 ## License
 
 [MIT](LICENSE) © 2018

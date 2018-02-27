@@ -1,6 +1,6 @@
 <?php
-declare(strict_types=1);
 
+declare(strict_types=1);
 
 
 // Register plugin helpers.
@@ -9,7 +9,8 @@ require template_path('library/plate.php');
 // Set theme defaults.
 add_action('after_setup_theme', function () {
     // Show the admin bar.
-    show_admin_bar(false);
+show_admin_bar(false);
+
 
     // Add post thumbnails support.
     add_theme_support('post-thumbnails');
@@ -58,6 +59,7 @@ add_filter('excerpt_more', function () {
 add_filter('excerpt_length', function () {
     return 101;
 });
+
 
 // Needed for woocommerce support (Apparently! Not making any difference)
 // Maybe remove later if not needed

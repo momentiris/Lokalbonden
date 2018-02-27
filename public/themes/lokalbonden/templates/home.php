@@ -2,7 +2,7 @@
 /*
 Template Name: Home
 */
-// get_header();
+get_header();
 ?>
 
 <div class="hero_wrap">
