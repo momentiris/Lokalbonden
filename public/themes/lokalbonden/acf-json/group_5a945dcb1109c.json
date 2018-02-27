@@ -1,13 +1,13 @@
 {
-    "key": "group_5a9413930cbcf",
-    "title": "testKristian",
+    "key": "group_5a945dcb1109c",
+    "title": "Home",
     "fields": [
         {
-            "key": "field_5a9413b133c9a",
-            "label": "testKristian2",
-            "name": "testkristian1",
+            "key": "field_5a945dd762ab3",
+            "label": "Header text",
+            "name": "header_text",
             "type": "text",
-            "instructions": "",
+            "instructions": "Här ändrar du texten i början av startsidan!",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -22,11 +22,11 @@
             "maxlength": ""
         },
         {
-            "key": "field_5a9413d333c9b",
-            "label": "testkris3",
-            "name": "testkris3",
-            "type": "text",
-            "instructions": "",
+            "key": "field_5a945e3162ab4",
+            "label": "Background Image 1",
+            "name": "background_image_1",
+            "type": "image",
+            "instructions": "Här uppdaterar du bakgrundsbild!",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -34,11 +34,16 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
         }
     ],
     "location": [
@@ -46,7 +51,7 @@
             {
                 "param": "page",
                 "operator": "==",
-                "value": "11"
+                "value": "17"
             }
         ]
     ],
@@ -58,5 +63,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1519653864
+    "modified": 1519672953
 }
