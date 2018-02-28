@@ -1,0 +1,31 @@
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: $light-green;
+  color: $white;
+  padding-bottom: 10px;
+
+  .footer-section {
+    display: inherit;
+    font-family: $display;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+
+      h1 {
+        font-weight: $text-large;
+      }
+  }
+
+  .col-1{ width: 33.33%}
+
+  .col-2 { width: 33.33% }
+
+  .col-3 { width: 33.33% }
+
+  .copyright {
+    display: inherit;
+    justify-content: center;
+    font-family: $paragraph;
+  }
+}

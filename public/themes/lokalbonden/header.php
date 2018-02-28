@@ -8,6 +8,9 @@
     <?php wp_head(); ?>
 
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+
 </head>
 <body <?php body_class(); ?>>
   <nav role="navigation">
