@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php //get_header(); ?>
 
 
 <!-- <main role="main">
@@ -14,5 +14,5 @@
             <p>Nothing to see.</p>
         </article>
     <?php endif; ?>
-</main>
-<?php get_footer();?> -->
+</main> -->
+<?php get_footer();?>
