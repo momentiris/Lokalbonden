@@ -2,12 +2,12 @@
 /*
 Template Name: About
 */
-
+get_header();
 // Get custom fields from about page.
 $aboutFields = get_field('about');
 
 ?>
-<?php get_header(); ?>
+
 
 <div id="main-content" class="main-content">
 

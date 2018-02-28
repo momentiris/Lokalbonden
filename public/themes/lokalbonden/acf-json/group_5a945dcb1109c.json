@@ -51,7 +51,7 @@
             {
                 "param": "page",
                 "operator": "==",
-                "value": "17"
+                "value": "11"
             }
         ]
     ],
@@ -60,8 +60,10 @@
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
-    "hide_on_screen": "",
+    "hide_on_screen": [
+        "the_content"
+    ],
     "active": 1,
     "description": "",
-    "modified": 1519672953
+    "modified": 1519741613
 }
