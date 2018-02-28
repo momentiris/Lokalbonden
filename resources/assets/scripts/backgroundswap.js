@@ -42,6 +42,8 @@ function changeBackgroundImage(object, currentCount) {
  * IIFE, don't know exactly how this works. But it makes the script wait for the fetch in getJsonObj func before it continues.
  * It basically makes the fetch synchronous.
  *
+ * Here is where the script starts.
+ *
  * @return {[void]} [doesn't return anything but calls the getJsonObj function]
  */
 (async () => {
