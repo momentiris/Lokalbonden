@@ -1,6 +1,5 @@
 import hamburger from './hamburger.js';
+import menuSmall from './menu.js';
 import './backgroundswap.js';
 
-// (function() {
-
-// })();
+window.addEventListener('scroll', menuSmall);
