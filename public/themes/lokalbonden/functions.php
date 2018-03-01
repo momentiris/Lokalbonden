@@ -90,6 +90,7 @@ function create_post_type($name, $nameSingular) {
   );
 }
 
+
 // Requires array of CPTs and executes the loop. See custom_post_types/customposttypes.php.
 require ('custom_post_types/customposttypes.php');
 

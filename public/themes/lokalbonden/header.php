@@ -7,12 +7,12 @@
 
     <?php wp_head(); ?>
 
+
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 </head>
 <body <?php body_class(); ?>>
     <header class="nav">
         <nav role="navigation">
-
             <?php require('templates/navigation.php')?>
         </nav>
     </header>
