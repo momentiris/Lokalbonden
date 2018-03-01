@@ -1,32 +1,37 @@
-.nav {
-  position: fixed;
-  z-index: 10;
-  width: 100vw;
-  padding-right: 6rem;
-  display: flex;
-  flex-flow: row;
-  justify-content: flex-end;
+.menu-navbar-container {
   align-items: center;
-  height: 70px;
-  background-color: rgba($light-green, 1);
+  // background-color: rgba($light-green, 1);
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  width: 100%;
 
-  .menu {
-    width: 175px;
+ .menu {
+   display: flex;
+   list-style: none;
+   padding-right: 3rem;
 
+   .menu-item, a {
+     color: $white;
+     font-size: 1.8rem;
+     font-family: $paragraph;
+     font-weight: $menuWeight;
+     letter-spacing: .05rem;
+     padding: .5rem .5rem;
+     position: relative;
+     text-decoration: none;
+    }
 
-   ul {
-     display: flex;
-     justify-content: space-around;
-
-     li, a  {
-      padding: 3px 5px;
-      font-size: 28px;
-      font-family: $headline;
-      color: $white;
-      list-style: none;
-      display: inline-block;
-      text-decoration: none;
-      }
+    .current-menu-item a::after {
+        content: url('/themes/lokalbonden/assets/images/svg/wobbly_line.svg');
+        height: 1rem;
+        margin: auto;
+        padding: 0;
+        position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+        width: 80%;
     }
   }
 }

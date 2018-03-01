@@ -5,14 +5,20 @@
 // Use: font-family: 'Amatic SC', cursive;
 
 // NavBar-text
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,900');
+
 // Use: font-family: 'Roboto', sans-serif;
 
 
 
 $display: 'Amatic SC', cursive;
-$headline: 'Roboto 700', sans-serif;
-$paragraph: 'Roboto 100', sans-serif;
+
+$paragraph: 'Roboto', sans-serif;
+
+$bodyWeight: 100;
+$preambleWeight: 300;
+$menuWeight: 900;
 
 
 $text-small: 1rem;

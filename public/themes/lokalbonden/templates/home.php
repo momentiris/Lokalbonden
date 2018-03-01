@@ -10,4 +10,7 @@ $image = $fields['background_image_1'];
 
     <h1 class="home-title" ><?php echo $fields['header_text'] ?></h1>
 
-    <?php get_footer(); ?>
+</div>
+
+    <?php get_footer();?>
+

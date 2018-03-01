@@ -1,4 +1,5 @@
 const hero = document.querySelector('.hero_wrap');
+
 const url = 'themes/lokalbonden/url.json';
 
 
@@ -32,10 +33,12 @@ function changeBackgroundImage(object, currentCount) {
  *
  * @return {[void]} [doesn't return anything but calls the getJsonObj function]
  */
+
 (async () => {
   // Promises are asynchronous but with async + await we can make the
   // promise synchronous. This mean the script will stop until the get
   // function returns data.
+
   const response = await fetch(url);
   const object = await response.json();
   console.log(object);
