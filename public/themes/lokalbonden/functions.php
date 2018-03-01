@@ -72,8 +72,6 @@ function woocommerce_support() {
 }
 
 
-
-
 /**
  * create_post_type - Creates custom post types.
  *
@@ -92,6 +90,7 @@ function create_post_type($name, $nameSingular) {
       ),
       'public' => true,
       'has_archive' => true,
+
     )
   );
 }
@@ -150,5 +149,6 @@ function getJsonImages() {
 
   //write json to file
   file_put_contents("themes/lokalbonden/url.json", $jsonified);
+
 
 }
