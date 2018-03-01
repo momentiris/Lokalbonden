@@ -14,9 +14,16 @@
 </head>
 <body <?php body_class(); ?>>
   <nav role="navigation">
-    <?php
-    // Get primary menu.
-    wp_nav_menu(['theme_location' => 'primary-menu']);
-    ?>
+    <?php if ( $pagename === 'home' || $pagename === ''): ?>
+      <div class="home">
+        <?php
+        // Get primary menu.
+        wp_nav_menu(['theme_location' => 'primary-menu']);
+        ?>
+      </div>
+    <?php else:
+      wp_nav_menu(['theme_location' => 'primary-menu']);
+    endif; ?>
+
   </nav>
 <main>
