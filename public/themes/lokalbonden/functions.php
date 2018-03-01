@@ -61,19 +61,23 @@ add_filter('excerpt_length', function () {
 });
 
 
-// Needed for woocommerce support (Apparently! Not making any difference)
-// Maybe remove later if not needed
-add_action( 'after_setup_theme', 'woocommerce_support' );
+/**
+ * woocommerce_support - Adds woocommerce support.
+ * @return [void]
+ */
+ add_action( 'after_setup_theme', 'woocommerce_support' );
+
 function woocommerce_support() {
     add_theme_support( 'woocommerce' );
 }
 
 
 /**
- * Create new post types.
+ * create_post_type - Creates custom post types.
  *
+ * @param  [string] $name
+ * @param  [string] $nameSingular
  * @return [void]
- *
  */
 add_action( 'CPT', 'create_post_type', 10, 2 );
 
@@ -86,6 +90,7 @@ function create_post_type($name, $nameSingular) {
       ),
       'public' => true,
       'has_archive' => true,
+
     )
   );
 }
@@ -93,7 +98,12 @@ function create_post_type($name, $nameSingular) {
 // Requires array of CPTs and executes the loop. See custom_post_types/customposttypes.php.
 require ('custom_post_types/customposttypes.php');
 
-// Adds custom user role and privileges
+
+/**
+ * Adds custom user role and privileges
+ *
+ * @return [I have no god damn idea.]
+ */
 add_role( 'master', __( 'Master' ),
     array(
         'read' => true, // true allows this capability
@@ -109,3 +119,36 @@ add_role( 'master', __( 'Master' ),
         'update_core' => false // user cant perform core updates
     )
 );
+
+/**
+ * getJsonImages - Collects URLs from images uploaded as background images in the home custom fields,
+ * saves the urls as a json object in the file url.json located in theme folder lokalbonden.
+ *
+ * @return [void] - Saves json object in url.json.
+ *
+ */
+ add_action('wp_enqueue_scripts', 'getJsonImages');
+
+function getJsonImages() {
+
+  $fields = get_fields();
+  $image_0 = $fields['background_image_1'];
+  $image_1 = $fields['background_image_2'];
+  $image_2 = $fields['background_image_3'];
+  $image_0_url = $image_0['sizes']['large'];
+  $image_1_url = $image_1['sizes']['large'];
+  $image_2_url = $image_2['sizes']['large'];
+
+  $imgUrls = [
+    '0' => "$image_0_url",
+    '1' => "$image_1_url",
+    '2' => "$image_2_url"
+  ];
+
+  $jsonified = json_encode($imgUrls, JSON_UNESCAPED_SLASHES);
+
+  //write json to file
+  file_put_contents("themes/lokalbonden/url.json", $jsonified);
+
+
+}

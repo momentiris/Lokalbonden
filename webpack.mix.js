@@ -17,6 +17,7 @@ const theme = process.env.WP_THEME;
 
 mix.setResourceRoot('../');
 mix.setPublicPath(`public/themes/${theme}/assets`);
+mix.webpackConfig({ devtool: "inline-source-map" });
 
 mix.js('resources/assets/scripts/app.js', 'scripts');
 mix.sass('resources/assets/styles/app.scss', 'styles');
