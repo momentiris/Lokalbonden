@@ -1,4 +1,4 @@
 /scripts/*
 /styles/*
-mix-mainfest.json
+mix-manifest.json
 !.gitignore
