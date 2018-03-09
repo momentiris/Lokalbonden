@@ -1,4 +1,9 @@
-.menu-navbar-container {
+.wobbly_nav {
+  stroke: $light-green;
+  position: absolute;
+}
+
+.menu-container {
   align-items: center;
   // background-color: rgba($light-green, 1);
   display: flex;
@@ -12,7 +17,7 @@
    padding-right: 3rem;
 
    .menu-item, a {
-     color: $light-green;
+     color: $white;
      font-size: 1.8rem;
      font-family: $paragraph;
      font-weight: $menuWeight;
@@ -20,56 +25,38 @@
      padding: .5rem .5rem;
      position: relative;
      text-decoration: none;
+     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
     }
 
-    .current-menu-item a::after {
-        background: url('/themes/lokalbonden/assets/images/svg/wobbly_line_green.svg');
-        content: '';
-        height: 1rem;
-        margin: auto;
-        padding: 0;
-        position: absolute;
-          bottom: -.5rem;
-          left: 0;
-          right: 0;
-        width: 80%;
-    }
-  }
-}
-
-.home {
-  .menu {
-    .menu-item, a {
-      color: $white;
-      text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-    }
-
-    .current-menu-item a::after {
-      background: url('/themes/lokalbonden/assets/images/svg/wobbly_line_white.svg');
-      content: '';
-    }
+    // .current-menu-item a::after {
+    //     background: url('/themes/lokalbonden/assets/images/svg/wobbly.svg') no-repeat;
+    //     content: '';
+    //     stroke: $white;
+    //     filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.5));
+    //     height: 1rem;
+    //     margin: auto;
+    //     padding: 0;
+    //     position: absolute;
+    //       bottom: -.5rem;
+    //       left: 0;
+    //       right: 0;
+    //     width: 80%;
+    // }
   }
 }
 
 .small {
-  background-color: rgba($white, .5);
+  // background-color: rgba($white, .5);
 
   .menu {
     margin: 0;
     .menu-item, a {
-      font-size: 1.4rem;
+      font-size: 1.5rem;
     }
 
     .current-menu-item a::after {
-      height: .5rem;
+      height: .55rem;
+      bottom: 0;
     }
   }
-}
-
-.home .small {
-  background-color: rgba($white, 0);
-}
-
-.wobbly_white {
-  stroke: #000;
 }
