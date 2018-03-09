@@ -1,11 +1,23 @@
 .wobbly_nav {
-  stroke: $light-green;
+  height: 20%;
+  margin: auto;
   position: absolute;
+    bottom: -.3rem;
+    left: 0;
+    right: 0;
+  width: 70%;
+
+  path {
+    stroke: $white;
+    stroke-dasharray: 80;
+    stroke-dashoffset: 80;
+    stroke-width: 4;
+    transition: all .3s ease-in-out;
+  }
 }
 
 .menu-container {
   align-items: center;
-  // background-color: rgba($light-green, 1);
   display: flex;
   justify-content: flex-end;
   position: fixed;
@@ -26,37 +38,28 @@
      position: relative;
      text-decoration: none;
      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+     transition: all .4s ease;
     }
 
-    // .current-menu-item a::after {
-    //     background: url('/themes/lokalbonden/assets/images/svg/wobbly.svg') no-repeat;
-    //     content: '';
-    //     stroke: $white;
-    //     filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.5));
-    //     height: 1rem;
-    //     margin: auto;
-    //     padding: 0;
-    //     position: absolute;
-    //       bottom: -.5rem;
-    //       left: 0;
-    //       right: 0;
-    //     width: 80%;
-    // }
+    a:hover ~  .wobbly_nav{
+        path {
+          stroke-dashoffset: 0;
+        }
+      }
+
+    .current-menu-item .wobbly_nav {
+      path {
+        stroke-dashoffset: 0;
+      }
+    }
   }
 }
 
 .small {
-  // background-color: rgba($white, .5);
-
   .menu {
     margin: 0;
     .menu-item, a {
       font-size: 1.5rem;
-    }
-
-    .current-menu-item a::after {
-      height: .55rem;
-      bottom: 0;
     }
   }
 }

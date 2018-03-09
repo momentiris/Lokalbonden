@@ -8,12 +8,6 @@ export default (function () {
   }
 }
 
-const wobblyNav = document.querySelector('.wobbly_nav');
-const currentPage = document.querySelector('.current-menu-item')
-console.dir(wobblyNav);
-wobblyNav.clientHeight = currentPage.clientHeight;
-wobblyNav.clientWidth = currentPage.clientWidth;
-
 window.addEventListener('scroll', menuSmall);
 
 })();
