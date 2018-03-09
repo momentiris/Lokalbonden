@@ -12,14 +12,7 @@
   transition: background-image 3s ease-out;
 
   .home-title {
-    text-align: center;
-    font-family: $display;
-    color: $white;
-    font-size: 100px;
-    max-width: 500px;
-    @include bp(small) {
-      color: black;
-    }
+    @extend .title;
   }
 
 }
