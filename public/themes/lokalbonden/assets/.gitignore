@@ -1,3 +1,4 @@
-*
+/scripts/*
+/styles/*
+mix-manifest.json
 !.gitignore
-!/images/*
