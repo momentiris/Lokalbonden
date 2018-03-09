@@ -109,6 +109,7 @@ add_role( 'master', __( 'Master' ),
         'update_core' => false // user cant perform core updates
     )
 );
+<<<<<<< HEAD
 
 /**
  * getJsonImages - Collects URLs from images uploaded as background images in the home custom fields,
@@ -161,3 +162,5 @@ add_action( 'init', 'jk_remove_wc_breadcrumbs' );
 function jk_remove_wc_breadcrumbs() {
     remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );
 }
+=======
+>>>>>>> master
