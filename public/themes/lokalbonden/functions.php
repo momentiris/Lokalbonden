@@ -61,16 +61,6 @@ add_filter('excerpt_length', function () {
 });
 
 
-/**
- * woocommerce_support - Adds woocommerce support.
- * @return [void]
- */
- add_action( 'after_setup_theme', 'woocommerce_support' );
-
-function woocommerce_support() {
-    add_theme_support( 'woocommerce' );
-}
-
 
 /**
  * create_post_type - Creates custom post types.
@@ -151,4 +141,23 @@ function getJsonImages() {
   file_put_contents("themes/lokalbonden/url.json", $jsonified);
 
 
+}
+
+/**
+ * woocommerce_support - Adds woocommerce support.
+ * @return [void]
+ */
+function mytheme_add_woocommerce_support() {
+	add_theme_support( 'woocommerce' );
+}
+add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
+
+// Make the product-names NOT be links to single product-page
+remove_action( 'woocommerce_before_shop_loop_item', 'woocommerce_template_loop_product_link_open', 10 );
+remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_product_link_close', 5 );
+
+// Remove WooCommerce-header (breadcrumb)
+add_action( 'init', 'jk_remove_wc_breadcrumbs' );
+function jk_remove_wc_breadcrumbs() {
+    remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );
 }
