@@ -1,7 +1,7 @@
+
 const hero = document.querySelector('.hero_wrap');
 
 const url = 'themes/lokalbonden/url.json';
-
 
 /**
  * counter set to one instead of 0 since I couldnt get first image without delay. So I decided to set the first one (0) in home.php like it was before. Inside the changeBackgroundImage function I check the current value of counter and reset to 0 if longer than our json objects length.
@@ -33,17 +33,20 @@ function changeBackgroundImage(object, currentCount) {
  *
  * @return {[void]} [doesn't return anything but calls the getJsonObj function]
  */
+console.log(window.location.pathname);
+// MÅSTE hitta bättre lösning här.
+if (window.location.pathname == "/") {
+  (async () => {
+    // Promises are asynchronous but with async + await we can make the
+    // promise synchronous. This mean the script will stop until the get
+    // function returns data.
 
-(async () => {
-  // Promises are asynchronous but with async + await we can make the
-  // promise synchronous. This mean the script will stop until the get
-  // function returns data.
+      const response = await fetch(url);
+      const object = await response.json();
+      console.log(object);
+      setInterval( () => {
+        changeBackgroundImage(object, counter);
+      }, 5000);
 
-  const response = await fetch(url);
-  const object = await response.json();
-  console.log(object);
-  setInterval( () => {
-    changeBackgroundImage(object, counter);
-  }, 5000);
-
-})();
+  })();
+}
