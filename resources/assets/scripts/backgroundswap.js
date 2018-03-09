@@ -1,7 +1,7 @@
 
 const hero = document.querySelector('.hero_wrap');
 
-const url = 'themes/lokalbonden/url.json';
+const url = 'themes/lokalbonden/jsonimages.php';
 
 /**
  * counter set to one instead of 0 since I couldnt get first image without delay. So I decided to set the first one (0) in home.php like it was before. Inside the changeBackgroundImage function I check the current value of counter and reset to 0 if longer than our json objects length.
