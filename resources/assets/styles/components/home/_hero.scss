@@ -12,6 +12,9 @@
   transition: background-image 3s ease-out;
 
   .home-title {
+<<<<<<< HEAD
+    @extend .title;
+=======
     text-align: center;
     font-family: $display;
     color: $white;
@@ -20,6 +23,7 @@
     @include bp(small) {
       color: black;
     }
+>>>>>>> master
   }
 
 }
