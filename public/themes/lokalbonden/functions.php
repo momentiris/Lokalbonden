@@ -61,16 +61,6 @@ add_filter('excerpt_length', function () {
 });
 
 
-/**
- * woocommerce_support - Adds woocommerce support.
- * @return [void]
- */
- add_action( 'after_setup_theme', 'woocommerce_support' );
-
-function woocommerce_support() {
-    add_theme_support( 'woocommerce' );
-}
-
 
 /**
  * create_post_type - Creates custom post types.
@@ -121,34 +111,20 @@ add_role( 'master', __( 'Master' ),
 );
 
 /**
- * getJsonImages - Collects URLs from images uploaded as background images in the home custom fields,
- * saves the urls as a json object in the file url.json located in theme folder lokalbonden.
- *
- * @return [void] - Saves json object in url.json.
- *
+ * woocommerce_support - Adds woocommerce support.
+ * @return [void]
  */
- add_action('wp_enqueue_scripts', 'getJsonImages');
+function mytheme_add_woocommerce_support() {
+	add_theme_support( 'woocommerce' );
+}
+add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
 
-function getJsonImages() {
+// Make the product-names NOT be links to single product-page
+remove_action( 'woocommerce_before_shop_loop_item', 'woocommerce_template_loop_product_link_open', 10 );
+remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_product_link_close', 5 );
 
-  $fields = get_fields();
-  $image_0 = $fields['background_image_1'];
-  $image_1 = $fields['background_image_2'];
-  $image_2 = $fields['background_image_3'];
-  $image_0_url = $image_0['sizes']['large'];
-  $image_1_url = $image_1['sizes']['large'];
-  $image_2_url = $image_2['sizes']['large'];
-
-  $imgUrls = [
-    '0' => "$image_0_url",
-    '1' => "$image_1_url",
-    '2' => "$image_2_url"
-  ];
-
-  $jsonified = json_encode($imgUrls, JSON_UNESCAPED_SLASHES);
-
-  //write json to file
-  file_put_contents("themes/lokalbonden/url.json", $jsonified);
-
-
+// Remove WooCommerce-header (breadcrumb)
+add_action( 'init', 'jk_remove_wc_breadcrumbs' );
+function jk_remove_wc_breadcrumbs() {
+    remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );
 }

@@ -14,6 +14,10 @@
 
 $display: 'Amatic SC', cursive;
 
+h1 {
+  font-family: $display;
+}
+
 $paragraph: 'Roboto', sans-serif;
 
 $bodyWeight: 100;
