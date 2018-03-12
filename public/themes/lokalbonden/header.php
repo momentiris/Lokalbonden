@@ -13,7 +13,12 @@
 
 </head>
 <body <?php body_class(); ?>>
-  <nav role="navigation">
+  <nav role="navigation" class="nav">
+    <button class="hamburger hamburger--spin" type="button">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
     <?php wp_nav_menu([
       'theme_location' => 'primary-menu',
       'container_class' => 'menu-container',

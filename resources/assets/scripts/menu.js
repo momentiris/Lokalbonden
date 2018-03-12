@@ -7,7 +7,7 @@ export default (function () {
     menu.classList.remove('small');
   }
 }
-
-window.addEventListener('scroll', menuSmall);
-
+if (window.innerWidth > 600) {
+  window.addEventListener('scroll', menuSmall);
+}
 })();
