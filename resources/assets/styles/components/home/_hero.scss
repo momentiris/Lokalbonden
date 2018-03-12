@@ -16,12 +16,12 @@
     font-family: $display;
     color: $white;
     font-size: 100px;
-    max-width: 500px;
+    max-width: 650px;
     @include bp(small) {
-      color: black;
+      font-size: 56px;
+      max-width: 100%;
     }
   }
-
 }
 
 .home-bridge {
