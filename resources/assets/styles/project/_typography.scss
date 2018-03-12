@@ -10,7 +10,9 @@
 
 // Use: font-family: 'Roboto', sans-serif;
 
+@import url('https://fonts.googleapis.com/css?family=Abel');
 
+// Use: font-family: 'Abel', sans-serif;
 
 $display: 'Amatic SC', cursive;
 
@@ -19,6 +21,8 @@ h1 {
 }
 
 $paragraph: 'Roboto', sans-serif;
+
+$button: 'Abel', sans-serif;
 
 $bodyWeight: 100;
 $preambleWeight: 300;
