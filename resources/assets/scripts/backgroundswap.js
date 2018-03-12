@@ -43,7 +43,6 @@ if (window.location.pathname == "/") {
 
       const response = await fetch(url);
       const object = await response.json();
-      console.log(object);
       setInterval( () => {
         changeBackgroundImage(object, counter);
       }, 5000);

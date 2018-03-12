@@ -1,9 +1,147 @@
 .presentation_wrap {
   background-color: $white;
   width: 100vw;
-  height: 75vh;
+  height: 85vh;
   background-size: contain;
   background-repeat: no-repeat;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  @include bp(small) {
+      background-image: none;
+      background-size: 0% 0%;
+      background-position: left bottom;
+      height: 100vh;
+
+    }
+
+  .presentation_content_wrap {
+    width: 75vw;
+    height: 65vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: column wrap;
+    @include bp(small) {
+      width: 100vw;
+      height: 100%;
+      padding-top: 1rem;
+
+    }
+
+    .presentation_header_text {
+      position: relative;
+      font-family: $display;
+      font-size: $text-larger;
+      // min-width: 220px;
+      @include bp(small) {
+          font-size: $text-large;
+        }
+    }
+
+    .symbols_wrap {
+      width: 30vw;
+      min-width: 300px;
+      height: 100px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      @include bp(small) {
+          height: 50px;
+          margin: 1rem;
+        }
+
+      .symbols {
+        width: 50px;
+        height: 50px;
+      }
+      .symbol_1 {background: url('/themes/lokalbonden/assets/images/svg/001-fruit.svg'); background-size: contain;}
+      .symbol_2 {background: url('/themes/lokalbonden/assets/images/svg/002-commerce.svg');background-size: contain;}
+      .symbol_3 {background: url('/themes/lokalbonden/assets/images/svg/003-shapes.svg');background-size: contain;}
+      .symbol_4 {background: url('/themes/lokalbonden/assets/images/svg/leaves.svg');background-size: contain;}
+    }
+
+    .presentation_content_text_wrap {
+      width: 75vw;
+      padding-top: 1rem;
+      display: flex;
+      justify-content: center;
+      @include bp(small) {
+        width: 100%;
+        flex-direction: column;
+        padding-top: .5rem;
+        align-items: center;
+      }
+    }
+    .text_inner_wrap {
+      padding: 0rem 1rem 1rem 1rem;
+      max-width: 300px;
+      text-align: center;
+
+      h5 {
+        font-family: $display;
+        font-size: 2rem;
+      }
+      p {
+        font-family: $paragraph;
+        font-weight: $bodyWeight;
+        min-width: 200px;
+        @include bp(small) {
+          max-width: 350px;
+        }
+      }
+    }
+
+    .presentation_button_wrap {
+      width: 75vw;
+      display: flex;
+      justify-content: center;
+      @include bp(small) {
+        width: 100vw;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: .5rem;
+      }
+      a {
+
+        width: 280px;
+        border-radius: 15px;
+        text-align: center;
+        font-family: $display;
+        color: $white;
+        text-decoration: none;
+        padding: .5rem 1rem .5rem 1rem;
+        background-color: #204638;
+        box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25);
+        font-weight: lighter;
+        font-size: 25px;
+        margin: .5rem 1rem .5rem 1rem;
+
+      }
+    }
+  }
+
+  .pres_svg {
+    position: absolute;
+    z-index: 10;
+    width: 40px;
+    height: 7px;
+    left: 59%;
+    bottom: 0;
+    path {
+      fill: none;
+      stroke-width: 6px;
+      stroke: $light-green;
+      stroke-dashoffset: 80;
+      stroke-dasharray: 80;
+      transition: .4s ease;
+    }
+    .wobble-active {
+      stroke-dashoffset: 0;
+    }
+  }
+
 
 
 }
