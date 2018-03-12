@@ -24,6 +24,11 @@ declare(strict_types=1);
    '1' => "$image_1_url",
    '2' => "$image_2_url"
  ];
+ foreach ($imgUrls as $imgUrl => $value) {
+   if ($value == '') {
+     unset($imgUrls[$imgUrl]);
+   }
+ }
 
  $jsonified = json_encode($imgUrls, JSON_UNESCAPED_SLASHES);
 

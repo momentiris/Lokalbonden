@@ -30,6 +30,7 @@
     }
 
     .presentation_header_text {
+      position: relative;
       font-family: $display;
       font-size: $text-larger;
       // min-width: 220px;
@@ -80,7 +81,6 @@
       h5 {
         font-family: $display;
         font-size: 2rem;
-
       }
       p {
         font-family: $paragraph;
@@ -93,11 +93,9 @@
     }
 
     .presentation_button_wrap {
-
       width: 75vw;
       display: flex;
       justify-content: center;
-
       @include bp(small) {
         width: 100vw;
         flex-direction: column;
@@ -120,11 +118,30 @@
         font-size: 25px;
         margin: .5rem 1rem .5rem 1rem;
 
-
-
-
       }
     }
   }
+
+  .pres_svg {
+    position: absolute;
+    z-index: 10;
+    width: 40px;
+    height: 7px;
+    left: 59%;
+    bottom: 0;
+    path {
+      fill: none;
+      stroke-width: 6px;
+      stroke: $light-green;
+      stroke-dashoffset: 80;
+      stroke-dasharray: 80;
+      transition: .4s ease;
+    }
+    .wobble-active {
+      stroke-dashoffset: 0;
+    }
+  }
+
+
 
 }
