@@ -1,19 +1,74 @@
-.menu-navbar-container {
+.wobbly_nav {
+  height: 20%;
+  margin: auto;
+  position: absolute;
+    bottom: -.3rem;
+    left: 0;
+    right: 0;
+  width: 70%;
+
+  path {
+    stroke: $white;
+    stroke-dasharray: 80;
+    stroke-dashoffset: 80;
+    stroke-width: 4;
+    transition: all .3s ease-in-out;
+  }
+}
+
+.nav {
+  display: flex;
+  position: fixed;
+  width: 100vw;
+  @include bp(small) {
+    flex-direction: column;
+  };
+
+  &::before {
+    content: '';
+    height: 100vh;
+    position: absolute;
+    transition: all .4s ease;
+    transform: translateY(100vw);
+    width: 100vw;
+  }
+
+  .hamburger {
+    align-self: flex-end;
+    margin: 1rem;
+    @include bp(large) {
+      display: none;
+    }
+  }
+}
+
+.menu-container {
   align-items: center;
-  // background-color: rgba($light-green, 1);
   display: flex;
   justify-content: flex-end;
-  position: fixed;
+  transition: all .4s ease;
   width: 100%;
-  transition: all .3s ease;
+  @include bp(small) {
+    align-items: flex-start;
+    justify-content: flex-start;
+    transform: translateY(100vh);
+    height: 100vh;
+  };
+
 
  .menu {
    display: flex;
    list-style: none;
    padding-right: 3rem;
+   @include bp(small) {
+     align-items: flex-start;
+     flex-direction: column;
+     padding: 0;
+   };
 
    .menu-item, a {
-     color: $light-green;
+     color: $white;
+     display: inline-block;
      font-size: 1.8rem;
      font-family: $paragraph;
      font-weight: $menuWeight;
@@ -21,56 +76,46 @@
      padding: .5rem .5rem;
      position: relative;
      text-decoration: none;
+     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+     transition: all .4s ease;
     }
 
-    .current-menu-item a::after {
-        background: url('/themes/lokalbonden/assets/images/svg/wobbly_line_green.svg');
-        content: '';
-        height: 1rem;
-        margin: auto;
-        padding: 0;
-        position: absolute;
-          bottom: -.5rem;
-          left: 0;
-          right: 0;
-        width: 80%;
-    }
-  }
-}
+    a:hover ~  .wobbly_nav{
+        path {
+          stroke-dashoffset: 0;
+        }
+      }
 
-.home {
-  .menu {
-    .menu-item, a {
-      color: $white;
-      text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-    }
-
-    .current-menu-item a::after {
-      background: url('/themes/lokalbonden/assets/images/svg/wobbly_line_white.svg');
-      content: '';
+    .current-menu-item .wobbly_nav {
+      path {
+        stroke-dashoffset: 0;
+      }
     }
   }
 }
 
 .small {
-  background-color: rgba($white, .5);
-
   .menu {
     margin: 0;
     .menu-item, a {
-      font-size: 1.4rem;
-    }
-
-    .current-menu-item a::after {
-      height: .5rem;
+      font-size: 1.5rem;
     }
   }
 }
 
-.home .small {
-  background-color: rgba($white, 0);
-}
+.nav.is-open::before {
+  background-color: rgba($forest-green, .8);
+  pointer-events: none;
+  transform: translateY(0);
 
-.wobbly_white {
-  stroke: #000;
+  @supports (backdrop-filter: blur()) {
+    background-color: rgba($forest-green, .5);
+    backdrop-filter: blur(5px);
+  }
+}
+.menu-container.is-open {
+  transform: translateY(0);
+
+  .menu {
+  }
 }
