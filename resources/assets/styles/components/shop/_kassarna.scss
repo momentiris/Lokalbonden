@@ -15,7 +15,21 @@
   flex-direction: row;
   width: 100%;
   height: auto;
-  background-color: $white;
+  background-image: url('../../../../../public/themes/lokalbonden/media/white.png');
+
+  @include bp(small) {
+    flex-direction: column;
+    align-items: center;
+  };
+}
+
+.woocommerce ul.products[class*=columns-] li.product, .woocommerce-page ul.products[class*=columns-] li.product {
+  @include bp(small) {
+    display: flex;
+    align-items: center;
+    width: 90%;
+
+  };
 }
 
 .woocommerce ul.products li.product .woocommerce-loop-category__title, .woocommerce ul.products li.product .woocommerce-loop-product__title, .woocommerce ul.products li.product h3 {
@@ -25,10 +39,14 @@
   padding: 0;
   margin: 30px 0 15px 0;
   letter-spacing: 5px;
+  @include bp(small) {
+    text-align: center;
+  };
 }
 .woocommerce .products ul, .woocommerce ul.products {
   margin: 0;
 }
+
 .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
   padding: 40px;
   padding-top: 0;
@@ -38,20 +56,29 @@
   float: none;
   margin: 0;
   width: 400px;
+  @include bp(small) {
+    padding: 0;
+  }
 
   p {
     width: 325px;
     height: 80px;
     font-family: $paragraph;
     font-size: 18px;
+    @include bp(small) {
+      text-align: center;
+    }
   }
 
   .delivery-info {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: row;
     height: 65px;
     width: 100%;
+    @include bp(small) {
+      justify-content: center;
+    };
 
     img {
       height: 36px;
@@ -62,6 +89,10 @@
     p {
       margin-left: 10px;
       height: 60px;
+      @include bp(small) {
+        margin-left: 3px;
+        text-align: left;
+      };
     }
   }
 
@@ -71,6 +102,9 @@
     font-size: 15px;
     font-weight: 100;
     font-style: italic;
+    @include bp(small) {
+      text-align: center;
+    };
   }
 
 }
@@ -96,4 +130,10 @@
   box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25);
   font-weight: lighter;
   font-size: 25px;
+}
+
+.wobbly-kassarna {
+  @include bp(small) {
+  transform: rotate(90deg);
+  };
 }

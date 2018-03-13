@@ -18,6 +18,12 @@
 
 get_header();
 
+// global $post;
+//
+//
+//       $fields = get_field('subpage_header', $post->ID);
+//       die(var_dump($fields));
+
 if ( ! defined( 'ABSPATH' ) ) {
   exit;
 }
@@ -70,7 +76,6 @@ if ( have_posts() ) {
     while ( have_posts() ) {
 
       the_post();
-
 
       /**
       * Hook: woocommerce_shop_loop.
