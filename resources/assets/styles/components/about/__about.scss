@@ -1,2 +1,97 @@
 //Here we import all the subfiles for this page.
 @import "temp";
+
+.about_page{
+  height: 100%;
+  width: 100%;
+}
+
+.header{
+  width: 100%;
+  padding: 10% 0% 10% 0%;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+.header_text{
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  flex-direction: column;
+  p{
+    font-size: 35px;
+    width: 70%;
+  }
+  h1{
+    font-size: 72px;
+  }
+}
+.sections{
+  background-color: $forest-green;
+
+  box-shadow: inset 0 0 10px #000000;
+}
+.first_section{
+  display: flex;
+
+  .left_column{
+    flex: 1;
+    text-align: center;
+
+    color: $white;
+    h2{
+      font-family: $display;
+      padding: 30px 20px 20px 20px;
+    }
+    p{
+      font-family: $paragraph;
+      padding: 0px 20px 20px 20px;
+    }
+  }
+  .right_column{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img{
+      border-radius: 3px;
+      height: 90%;
+      width: 90%;
+    }
+  }
+}
+
+.second_section{
+  display: flex;
+  .left_column{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img{
+      border-radius: 3px;
+      height: 90%;
+      width: 90%;
+    }
+  }
+  .right_column{
+    flex: 1;
+    text-align: center;
+
+    color: $white;
+    h2{
+      font-family: $display;
+      padding: 30px 20px 20px 20px;
+    }
+    p{
+      font-family: $paragraph;
+      padding: 0px 20px 20px 20px;
+    }
+  }
+}
+// @include bp(medium){
+//   font-size: 30px;
+// }
+// @include bp(small){
+//   font-size: 25px;
+// }
