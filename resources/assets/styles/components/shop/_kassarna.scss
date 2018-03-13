@@ -9,12 +9,14 @@
 }
 
 .products {
+  z-index: 1;
   display: flex;
   justify-content: space-around;
   flex-direction: row;
   width: 100%;
   height: auto;
   background-color: $white;
+<<<<<<< HEAD
 }
 
 .woocommerce ul.products li.product .woocommerce-loop-category__title, .woocommerce ul.products li.product .woocommerce-loop-product__title, .woocommerce ul.products li.product h3 {
@@ -26,6 +28,21 @@
   letter-spacing: 5px;
 }
 
+=======
+}
+
+.woocommerce ul.products li.product .woocommerce-loop-category__title, .woocommerce ul.products li.product .woocommerce-loop-product__title, .woocommerce ul.products li.product h3 {
+  font-family: $display;
+  font-size: 60px;
+  width: 350px;
+  padding: 0;
+  margin: 30px 0 15px 0;
+  letter-spacing: 5px;
+}
+.woocommerce .products ul, .woocommerce ul.products {
+  margin: 0;
+}
+>>>>>>> master
 .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
   padding: 40px;
   padding-top: 0;

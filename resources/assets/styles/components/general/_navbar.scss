@@ -2,7 +2,7 @@
   height: 20%;
   margin: auto;
   position: absolute;
-    bottom: -.3rem;
+    bottom: 0.4rem;
     left: 0;
     right: 0;
   width: 70%;
@@ -29,17 +29,35 @@
     height: 100vh;
     position: absolute;
     transition: all .4s ease;
+<<<<<<< HEAD
     transform: translateY(100vw);
+=======
+    transform: translateY(100vh);
+>>>>>>> master
     width: 100vw;
   }
 
   .hamburger {
+<<<<<<< HEAD
     align-self: flex-end;
     margin: 1rem;
     @include bp(large) {
       display: none;
     }
   }
+=======
+    display: none;
+    align-self: flex-end;
+    margin: 1rem;
+    @include bp(small) {
+      display: block;
+    }
+  }
+  .hamburger-inner.green, .hamburger-inner.green::before, .hamburger-inner.green::after {
+    background-color: $forest-green;
+    transition: background-color 0.2s ease;
+  }
+>>>>>>> master
 }
 
 .menu-container {
@@ -70,7 +88,7 @@
      color: $white;
      display: inline-block;
      font-size: 1.8rem;
-     font-family: $paragraph;
+     font-family: $button;
      font-weight: $menuWeight;
      letter-spacing: .05rem;
      padding: .5rem .5rem;
@@ -115,7 +133,10 @@
 }
 .menu-container.is-open {
   transform: translateY(0);
+<<<<<<< HEAD
 
   .menu {
   }
+=======
+>>>>>>> master
 }
