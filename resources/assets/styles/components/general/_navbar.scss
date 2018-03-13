@@ -29,23 +29,11 @@
     height: 100vh;
     position: absolute;
     transition: all .4s ease;
-<<<<<<< HEAD
-    transform: translateY(100vw);
-=======
     transform: translateY(100vh);
->>>>>>> master
     width: 100vw;
   }
 
   .hamburger {
-<<<<<<< HEAD
-    align-self: flex-end;
-    margin: 1rem;
-    @include bp(large) {
-      display: none;
-    }
-  }
-=======
     display: none;
     align-self: flex-end;
     margin: 1rem;
@@ -57,7 +45,6 @@
     background-color: $forest-green;
     transition: background-color 0.2s ease;
   }
->>>>>>> master
 }
 
 .menu-container {
@@ -133,10 +120,4 @@
 }
 .menu-container.is-open {
   transform: translateY(0);
-<<<<<<< HEAD
-
-  .menu {
-  }
-=======
->>>>>>> master
 }

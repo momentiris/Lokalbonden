@@ -6,10 +6,6 @@ export default (function () {
     menu.classList.remove('small');
   }
 }
-<<<<<<< HEAD
-if (window.innerWidth > 600) {
-  window.addEventListener('scroll', menuSmall);
-=======
 
   function changeHamburgerColor() {
     const hamburger = document.querySelector('.hamburger-inner');
@@ -28,6 +24,5 @@ if (window.innerWidth > 768) {
   window.addEventListener('scroll', makeMenuSmaller);
 } else {
   window.addEventListener('scroll', changeHamburgerColor);
->>>>>>> master
 }
 })();

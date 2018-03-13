@@ -1,10 +1,6 @@
 @mixin bp($point) {
   @if $point == small {
-<<<<<<< HEAD
-    @media (max-width: 600px) { @content; }
-=======
     @media (max-width: 767px) { @content; }
->>>>>>> master
   }
   @else if $point == medium {
     @media (max-width: 1250px) { @content; }
