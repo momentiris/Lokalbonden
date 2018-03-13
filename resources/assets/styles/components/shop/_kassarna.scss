@@ -9,6 +9,7 @@
 }
 
 .products {
+  z-index: 1;
   display: flex;
   justify-content: space-around;
   flex-direction: row;
@@ -25,7 +26,9 @@
   margin: 30px 0 15px 0;
   letter-spacing: 5px;
 }
-
+.woocommerce .products ul, .woocommerce ul.products {
+  margin: 0;
+}
 .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
   padding: 40px;
   padding-top: 0;
