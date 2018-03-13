@@ -2,11 +2,17 @@
   @extend .subpageTitle;
   background-image: url('/../../../uploads/bg_3-1-768x432.jpg');
   background-size: cover;
+  @include bp(ipad) {
+      height: 30vh;
+    }
 
   h1 {
     @extend .title;
   }
-}
+
+
+  };
+
 
 .products {
   z-index: 1;
@@ -28,14 +34,18 @@
     display: flex;
     align-items: center;
     width: 90%;
-
-  };
+  }
+  @include bp(ipad) {
+      margin-bottom: 0;
+    }
 }
+
+
 
 .woocommerce ul.products li.product .woocommerce-loop-category__title, .woocommerce ul.products li.product .woocommerce-loop-product__title, .woocommerce ul.products li.product h3 {
   font-family: $display;
-  font-size: 60px;
-  width: 350px;
+  font-size: 55px;
+  width: 330px;
   padding: 0;
   margin: 30px 0 15px 0;
   letter-spacing: 5px;
@@ -48,16 +58,16 @@
 }
 
 .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
-  padding: 40px;
-  padding-top: 0;
+  box-sizing: border-box;
+  padding: 0 0 55px 20px;
   display: flex;
   justify-content: center;
   flex-direction: column;
   float: none;
   margin: 0;
-  width: 400px;
+  width: 350px;
   @include bp(small) {
-    padding: 0;
+    padding: 25px 0;
   }
 
   p {
@@ -78,6 +88,7 @@
     width: 100%;
     @include bp(small) {
       justify-content: center;
+      width: 340px;
     };
 
     img {
@@ -90,7 +101,6 @@
       margin-left: 10px;
       height: 60px;
       @include bp(small) {
-        margin-left: 3px;
         text-align: left;
       };
     }
@@ -135,5 +145,6 @@
 .wobbly-kassarna {
   @include bp(small) {
   transform: rotate(90deg);
+  position: absolute;
   };
 }
