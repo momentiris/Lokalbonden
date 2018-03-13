@@ -10,7 +10,7 @@
 
       <div class="col-2">
         <!-- <img src="/themes/lokalbonden/assets/images/svg/wobbly_line.svg"> -->
-        <h1>Lokalbonden</h1>
+        <!-- <h1>Lokalbonden</h1> -->
         <!-- <img src="/themes/lokalbonden/assets/images/svg/wobbly_line.svg"> -->
         <h2>En familjär matkasse <br> För dig och för miljön</h2>
       </div>
