@@ -12,11 +12,17 @@
   transition: background-image 3s ease-out;
 
   .home-title {
-    @extend .title;
+    text-align: center;
+    font-family: $display;
+    color: $white;
+    font-size: 100px;
+    max-width: 650px;
+    @include bp(small) {
+      font-size: 56px;
+      max-width: 100%;
+    }
   }
-
 }
-
 .home-bridge {
   display: flex;
   justify-content: center;

@@ -10,7 +10,9 @@
 
 // Use: font-family: 'Roboto', sans-serif;
 
+@import url('https://fonts.googleapis.com/css?family=Abel');
 
+// Use: font-family: 'Abel', sans-serif;
 
 $display: 'Amatic SC', cursive;
 
@@ -20,6 +22,8 @@ h1 {
 
 $paragraph: 'Roboto', sans-serif;
 
+$button: 'Abel', sans-serif;
+
 $bodyWeight: 100;
 $preambleWeight: 300;
 $menuWeight: 900;
@@ -28,3 +32,4 @@ $menuWeight: 900;
 $text-small: 1rem;
 $text-medium: 2rem;
 $text-large: 3rem;
+$text-larger: 4rem;
