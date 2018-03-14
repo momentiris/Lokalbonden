@@ -45,10 +45,9 @@ add_action('after_setup_theme', function () {
   ]);
 
 
-  // Add primary WordPress menu.
-  register_nav_menu('primary-menu', __('Primary Menu', 'wordplate'));
-  register_nav_menu('checkout-menu', __('Checkout Menu'));
-
+    // Add primary WordPress menu.
+    register_nav_menu('primary-menu', __('Primary Menu', 'wordplate'));
+    register_nav_menu('checkout-menu', __('Checkout Menu'));
 });
 
 // Enqueue and register scripts the right way.
