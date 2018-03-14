@@ -17,26 +17,35 @@
 
   .presentation_content_wrap {
     width: 75vw;
-    height: 65vh;
+
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     flex-flow: column wrap;
     @include bp(small) {
       width: 100vw;
       height: 100%;
       padding-top: 1rem;
+    }
+    @include bp(large) {
+
+    height: auto;
 
     }
+
 
     .presentation_header_text {
       position: relative;
       font-family: $display;
       font-size: $text-larger;
+      z-index: 0;
       // min-width: 220px;
       @include bp(small) {
           font-size: $text-large;
         }
+      @include bp(large) {
+        font-size: 5rem;
+      }
     }
 
     .symbols_wrap {
@@ -50,10 +59,17 @@
           height: 50px;
           margin: 1rem;
         }
-
+      @include bp(large) {
+        width: 35vw;
+      }
       .symbols {
         width: 50px;
         height: 50px;
+        @include bp(large) {
+          width: 60px;
+          height: 60px;
+        }
+
       }
       .symbol_1 {background: url('/themes/lokalbonden/assets/images/svg/001-fruit.svg'); background-size: contain;}
       .symbol_2 {background: url('/themes/lokalbonden/assets/images/svg/002-commerce.svg');background-size: contain;}
@@ -76,18 +92,30 @@
     .text_inner_wrap {
       padding: 0rem 1rem 1rem 1rem;
       max-width: 300px;
-      text-align: center;
-
+      @include bp(large) {
+        max-width: 400px;
+      }
+      @include bp(small) {
+        text-align: center;
+      }
       h5 {
         font-family: $display;
-        font-size: 2rem;
+        font-size: $text-medium;
+        @include bp(large) {
+          font-size: 2.5rem;
+        }
       }
       p {
         font-family: $paragraph;
         font-weight: $bodyWeight;
         min-width: 200px;
+        font-size: 1rem;
         @include bp(small) {
           max-width: 350px;
+        }
+        @include bp(large) {
+          max-width: 400px;
+          font-size: 1.25rem;
         }
       }
     }
@@ -96,15 +124,19 @@
       width: 75vw;
       display: flex;
       justify-content: center;
+      margin-top: 1rem;
       @include bp(small) {
         width: 100vw;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        margin-top: .5rem;
+        margin-top: 0;
+      }
+      @include bp(large) {
+        width: 50vw;
+        justify-content: space-around;
       }
       a {
-
         width: 280px;
         border-radius: 15px;
         text-align: center;
@@ -124,11 +156,21 @@
 
   .pres_svg {
     position: absolute;
-    z-index: 10;
+
     width: 40px;
     height: 7px;
     left: 59%;
     bottom: 0;
+    @include bp(large) {
+      left: 59%;
+      width: 55px;
+      bottom: 5px;
+    }
+    @include bp(small) {
+      left: 59%;
+      width: 31px;
+      bottom: 1px;
+    }
     path {
       fill: none;
       stroke-width: 6px;
@@ -137,7 +179,7 @@
       stroke-dasharray: 80;
       transition: .4s ease;
     }
-    .wobble-active {
+    .wobble--active {
       stroke-dashoffset: 0;
     }
   }
