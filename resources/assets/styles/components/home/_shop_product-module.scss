@@ -15,10 +15,13 @@
   }
 
   a {
-    width: 175px;
+    width: 150px;
     margin-top: auto;
+    margin-right: 2.5rem;
+    align-self: flex-end;
     @include bp(small) {
       margin: 1rem;
+      align-self: center;
     }
   }
   h1 {

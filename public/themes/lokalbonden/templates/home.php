@@ -66,15 +66,26 @@ $image_hero = $fields['background_image_1'];
       <p><?php echo $fields['product_1_description']; ?></p>
       <a href="#" class="button">Beställ nu!</a>
     </div>
-    <svg class="shop_svg" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 20.13">
-      <path fill="none" d="M0 19.565s22.292-21.5 43.273-14.5 26.226 16.598 66.221 6.549c39.995-10.049 64.91-8.549 85.235 2.451s60.976-21.303 93.759-10.401c32.782 10.901 49.829 17.401 83.924 2.901"/>
-    </svg>
+    <img class="shop_svg" src="/themes/lokalbonden/assets/images/svg/wobbly_kassarna.svg" alt="">
     <div class="featured_product">
       <h1><?php echo $fields['product_2_name']; ?></h1>
       <p><?php echo $fields['product_2_description']; ?></p>
       <a href="#" class="button">Beställ nu!</a>
     </div>
   </div>
+
+</div>
+
+<div class="info_section_wrap">
+  <div class="howto_content">
+    <h1><?php echo $fields['how_header']; ?></h1>
+      <p>- <?php echo $fields['how_step_1']; ?></p>
+      <p>- <?php echo $fields['how_step_2']; ?></p>
+      <p>- <?php echo $fields['how_step_3']; ?></p>
+
+      <a href="#" class="button">Till kassarna!</a>
+  </div>
+
 
 </div>
 
