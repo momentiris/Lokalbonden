@@ -16,19 +16,24 @@
  * @version 3.3.0
  */
 
-get_header();
-
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
+?>
+<!-- WooCommerce wrapper -->
+<div class="woocommerce-cart-wrapper">
 
-wc_print_notices();
+<?php
+  // Print WooCommerce messages
+  wc_print_notices();
 
-do_action( 'woocommerce_before_cart' ); ?>
+  // Before cart hook
+  do_action( 'woocommerce_before_cart' ); ?>
 
 <form class="woocommerce-cart-form" action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
 	<?php do_action( 'woocommerce_before_cart_table' ); ?>
 
+  <!-- Cart table -->
 	<table class="shop_table shop_table_responsive cart woocommerce-cart-form__contents" cellspacing="0">
 		<thead>
 			<tr>
@@ -125,19 +130,10 @@ do_action( 'woocommerce_before_cart' ); ?>
 			}
 			?>
 
-			<?php do_action( 'woocommerce_cart_contents' ); ?>
-
-			<tr>
-				<td colspan="6" class="actions">
-
-					<?php if ( wc_coupons_enabled() ) { ?>
-						<div class="coupon">
-							<label for="coupon_code"><?php esc_html_e( 'Coupon:', 'woocommerce' ); ?></label> <input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Coupon code', 'woocommerce' ); ?>" /> <input type="submit" class="button" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?>" />
-							<?php do_action( 'woocommerce_cart_coupon' ); ?>
-						</div>
-					<?php } ?>
-
+          <!-- Update cart -->
 					<button type="submit" class="button" name="update_cart" value="<?php esc_attr_e( 'Update cart', 'woocommerce' ); ?>"><?php esc_html_e( 'Update cart', 'woocommerce' ); ?></button>
+
+          <!-- After cart -->
 
 					<?php do_action( 'woocommerce_cart_actions' ); ?>
 
@@ -151,6 +147,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 	<?php do_action( 'woocommerce_after_cart_table' ); ?>
 </form>
 
+<!-- Cart totals -->
 <div class="cart-collaterals">
 	<?php
 		/**
@@ -163,4 +160,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 	?>
 </div>
 
+</div> <!-- end of woocommerce-cart-wrapper -->
+
+<!-- After total cart -->
 <?php do_action( 'woocommerce_after_cart' ); ?>
