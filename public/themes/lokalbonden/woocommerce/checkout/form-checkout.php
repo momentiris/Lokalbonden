@@ -20,6 +20,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+?>
+
+<div class="woocommerce-cart-wrapper">
+
+  <?php
+
 wc_print_notices();
 
 do_action( 'woocommerce_before_checkout_form', $checkout );
@@ -63,5 +69,5 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 	<?php do_action( 'woocommerce_checkout_after_order_review' ); ?>
 
 </form>
-
+</div> <!-- end of woocommerce-cart-wrapper -->
 <?php do_action( 'woocommerce_after_checkout_form', $checkout ); ?>

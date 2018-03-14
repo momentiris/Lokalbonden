@@ -104,7 +104,7 @@ add_action( 'woocommerce_after_shop_loop_item', 'custom_field_product_info', 5);
 //   $currency_symbol = '';
 //   return $currency_symbol;
 // }
-add_filter('woocommerce_currency_symbol', 'sww_remove_wc_currency_symbols', 10, 2);
+// add_filter('woocommerce_currency_symbol', 'sww_remove_wc_currency_symbols', 10, 2);
 
 // Remove decimals from price
 add_filter( 'woocommerce_price_trim_zeros', '__return_true' );
@@ -128,3 +128,7 @@ function sv_change_product_price_display( $price ) {
 
 add_filter( 'woocommerce_get_price_html', 'sv_change_product_price_display' );
 add_filter( 'woocommerce_cart_item_price', 'sv_change_product_price_display' );
+
+// CHECKOUT PAGE
+
+add_action('woocommerce_checkout_before_customer_details', 'checkout_slider');
