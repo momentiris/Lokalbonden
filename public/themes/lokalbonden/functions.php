@@ -37,7 +37,6 @@ add_action('after_setup_theme', function () {
 
 // Enqueue and register scripts the right way.
 add_action('wp_enqueue_scripts', function () {
-  wp_deregister_script('jquery');
 
   wp_enqueue_style('wordplate', mix('styles/app.css'));
 
@@ -226,11 +225,11 @@ function sv_change_product_price_display( $price ) {
   global $product;
   $id = $product->get_id();
   if ($id === 44) {
-    $price = 'Från '.$price.':- per kasse';
+    $price = 'Från '.$price.' per kasse';
     return $price;
 
   } elseif ($id === 50) {
-    $price = 'Testa-på pris '.$price.':-';
+    $price = 'Testa-på pris '.$price;
     return $price;
   }
 }
