@@ -1,5 +1,14 @@
 <?php
 
+/*
+ * This file is part of Lokalbonden.
+ *
+ * MIT License, Lokalbonden special squad.
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 declare(strict_types=1);
 // for some reason gives access to wordpress functions. ??? :)
  require('../../wordpress/wp-blog-header.php');
@@ -25,14 +34,12 @@ declare(strict_types=1);
    '2' => "$image_2_url"
  ];
  foreach ($imgUrls as $imgUrl => $value) {
-   if ($value == '') {
-     unset($imgUrls[$imgUrl]);
-   }
+     if ($value == '') {
+         unset($imgUrls[$imgUrl]);
+     }
  }
 
  $jsonified = json_encode($imgUrls, JSON_UNESCAPED_SLASHES);
 
  //write json to file
  echo $jsonified;
-
- ?>
