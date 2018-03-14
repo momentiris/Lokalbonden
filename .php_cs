@@ -20,7 +20,7 @@ $rules = [
 
 $finder = PhpCsFixer\Finder::create()
     ->exclude(['vendor'])
-    ->in(__DIR__);
+    ->in(__DIR__ . '/public/themes/lokalbonden');
 
 return PhpCsFixer\Config::create()
     ->setRules($rules)
