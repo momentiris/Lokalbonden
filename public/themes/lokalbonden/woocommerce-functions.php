@@ -109,12 +109,12 @@ add_action('woocommerce_after_shop_loop_item_title', 'custom_field_delivery_info
 add_action('woocommerce_after_shop_loop_item', 'custom_field_product_info', 5);
 
 // Remove all currency symbols
-function sww_remove_wc_currency_symbols($currency_symbol, $currency)
-{
-    $currency_symbol = '';
-    return $currency_symbol;
-}
-add_filter('woocommerce_currency_symbol', 'sww_remove_wc_currency_symbols', 10, 2);
+// function sww_remove_wc_currency_symbols($currency_symbol, $currency)
+// {
+//     $currency_symbol = '';
+//     return $currency_symbol;
+// }
+// add_filter('woocommerce_currency_symbol', 'sww_remove_wc_currency_symbols', 10, 2);
 
 // Remove decimals from price
 add_filter('woocommerce_price_trim_zeros', '__return_true');
@@ -126,10 +126,10 @@ function sv_change_product_price_display($price)
         global $product;
         $id = $product->get_id();
         if ($id === 44) {
-            $price = 'Från '.$price.':- per kasse';
+            $price = 'Från '.$price.' per kasse';
             return $price;
         } elseif ($id === 50) {
-            $price = 'Testa-på pris '.$price.':-';
+            $price = 'Testa-på pris '.$price;
             return $price;
         }
     }
