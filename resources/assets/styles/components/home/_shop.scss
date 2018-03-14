@@ -12,23 +12,36 @@
 
   @include bp(small) {
     height: 100vh;
-
   }
   h1 {
     font-size: $text-larger;
     @include bp(small) {
       font-size: 3rem;
       margin-bottom: 1rem;
-
     }
   }
   .product_inner {
+    width: 75vw;
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
     @include bp(small) {
-    flex-direction: column;
-
+      flex-direction: column;
+      height: 85vh;
     }
   }
-
+}
+.shop_svg {
+  transform: rotate(90deg);
+  fill: none;
+  height: 10px;
+  min-width: 250px;
+  position: absolute;
+  stroke-width: 7px;
+  stroke: $forest-green;
+  z-index: 10;
+  @include bp(small) {
+    display: none;
+  }
 }
