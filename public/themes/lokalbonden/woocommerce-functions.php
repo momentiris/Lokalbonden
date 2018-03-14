@@ -100,10 +100,10 @@ add_action( 'woocommerce_after_shop_loop_item_title', 'custom_field_delivery_inf
 add_action( 'woocommerce_after_shop_loop_item', 'custom_field_product_info', 5);
 
 // Remove all currency symbols
-function sww_remove_wc_currency_symbols( $currency_symbol, $currency ) {
-  $currency_symbol = '';
-  return $currency_symbol;
-}
+// function sww_remove_wc_currency_symbols( $currency_symbol, $currency ) {
+//   $currency_symbol = '';
+//   return $currency_symbol;
+// }
 add_filter('woocommerce_currency_symbol', 'sww_remove_wc_currency_symbols', 10, 2);
 
 // Remove decimals from price
