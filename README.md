@@ -1,5 +1,7 @@
 # Lokalbonden
 
+[![StyleCI](https://styleci.io/repos/122070064/shield?branch=andreas)](https://styleci.io/repos/122070064)
+
 ## Setup
 - Clone repo to your local computer
 - Make sure you have composer and npm installed
