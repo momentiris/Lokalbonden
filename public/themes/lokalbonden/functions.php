@@ -15,6 +15,10 @@ declare(strict_types=1);
 // Register plugin helpers.
 require template_path('library/plate.php');
 
+// Woocommerce functions
+require __DIR__.'/woocommerce-functions.php';
+require __DIR__.'/cart-functions.php';
+
 // Set theme defaults.
 add_action('after_setup_theme', function () {
     // Show the admin bar.
@@ -40,8 +44,11 @@ add_action('after_setup_theme', function () {
     'widgets',
   ]);
 
-    // Add primary WordPress menu.
-    register_nav_menu('primary-menu', __('Primary Menu', 'wordplate'));
+
+  // Add primary WordPress menu.
+  register_nav_menu('primary-menu', __('Primary Menu', 'wordplate'));
+  register_nav_menu('checkout-menu', __('Checkout Menu'));
+
 });
 
 // Enqueue and register scripts the right way.
