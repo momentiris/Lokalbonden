@@ -1,4 +1,4 @@
-
+if (window.location.pathname == "/om-oss/") {
 function isElementInViewport(el) {
   var rect = el.getBoundingClientRect();
   return (
@@ -25,3 +25,4 @@ let section_border = [document.querySelector('.section_border_wrapper'), false];
 addListner(elem_section1, 'svg_wrap', 'svg_wrap_active');
 addListner(elem_section2, 'svg_wrap', 'svg_wrap_active');
 addListner(section_border, 'section_border', 'section_border_active');
+};

@@ -9,12 +9,12 @@ get_header();
 $contactPosts = get_posts(array('category_name' => 'Contact'));
 
 // Loops the posts with our defined search parameters
-foreach ( $contactPosts as $post ) : setup_postdata( $post ); ?>
+foreach ($contactPosts as $post) : setup_postdata($post); ?>
 
-<h2><?php the_title();?></h2>                      <!-- Get post title -->
-<p><?php the_content(); ?></p>                      <!-- Get post content -->
+<h2><?php the_title();?></h2> <!-- Get post title -->
+<p><?php the_content(); ?></p> <!-- Get post content -->
 
-<?php if (has_category('Adress', $post)): ?>        <!-- Checks if post is certain category -->
+<?php if (has_category('Adress', $post)): ?> <!-- Checks if post is certain  category -->
   <p>Post with the specified category</p>
 <?php endif; ?>
 

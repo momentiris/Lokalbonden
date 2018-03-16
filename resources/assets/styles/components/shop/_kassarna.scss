@@ -2,53 +2,94 @@
   @extend .subpageTitle;
   background-image: url('/../../../uploads/bg_3-1-768x432.jpg');
   background-size: cover;
+  @include bp(ipad) {
+      height: 30vh;
+    }
 
   h1 {
     @extend .title;
   }
-}
+
+
+  };
+
 
 .products {
+  z-index: 1;
   display: flex;
   justify-content: space-around;
   flex-direction: row;
   width: 100%;
   height: auto;
-  background-color: $white;
+  background-image: url('../../../../../public/themes/lokalbonden/media/white.png');
+
+  @include bp(small) {
+    flex-direction: column;
+    align-items: center;
+  };
 }
+
+.woocommerce ul.products[class*=columns-] li.product, .woocommerce-page ul.products[class*=columns-] li.product {
+  @include bp(small) {
+    display: flex;
+    align-items: center;
+    width: 90%;
+  }
+  @include bp(ipad) {
+      margin-bottom: 0;
+    }
+}
+
+
 
 .woocommerce ul.products li.product .woocommerce-loop-category__title, .woocommerce ul.products li.product .woocommerce-loop-product__title, .woocommerce ul.products li.product h3 {
   font-family: $display;
-  font-size: 60px;
-  width: 350px;
+  font-size: 55px;
+  width: 330px;
   padding: 0;
   margin: 30px 0 15px 0;
   letter-spacing: 5px;
+  @include bp(small) {
+    text-align: center;
+  };
+}
+.woocommerce .products ul, .woocommerce ul.products {
+  margin: 0;
 }
 
 .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
-  padding: 40px;
-  padding-top: 0;
+  box-sizing: border-box;
+  padding: 0 0 55px 20px;
   display: flex;
   justify-content: center;
   flex-direction: column;
   float: none;
   margin: 0;
-  width: 400px;
+  width: 350px;
+  @include bp(small) {
+    padding: 25px 0;
+  }
 
   p {
     width: 325px;
     height: 80px;
     font-family: $paragraph;
     font-size: 18px;
+    @include bp(small) {
+      text-align: center;
+    }
   }
 
   .delivery-info {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: row;
     height: 65px;
     width: 100%;
+    @include bp(small) {
+      justify-content: center;
+      width: 340px;
+    };
 
     img {
       height: 36px;
@@ -59,6 +100,9 @@
     p {
       margin-left: 10px;
       height: 60px;
+      @include bp(small) {
+        text-align: left;
+      };
     }
   }
 
@@ -68,6 +112,9 @@
     font-size: 15px;
     font-weight: 100;
     font-style: italic;
+    @include bp(small) {
+      text-align: center;
+    };
   }
 
 }
@@ -93,4 +140,11 @@
   box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25);
   font-weight: lighter;
   font-size: 25px;
+}
+
+.wobbly-kassarna {
+  @include bp(small) {
+  transform: rotate(90deg);
+  position: absolute;
+  };
 }
