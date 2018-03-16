@@ -53,7 +53,22 @@ do_action('woocommerce_before_main_content');
 <?php
 global $product;
 
-if (have_posts()) {
+$args = [
+	'posts_per_page' => -1,
+	'post_type'      => 'product',
+	'post_status'    => 'publish',
+  'tax_query'      => [
+      [
+          'taxonomy'  => 'product_cat',
+          'field'     => 'term_id',
+          'terms'     => array('21'),
+          'operator'  => 'IN',
+      ]
+ ]
+];
+$featured_products = new WP_Query( $args );
+
+if ($featured_products->have_posts()) {
 
   /**
   * Hook: woocommerce_before_shop_loop.
@@ -67,8 +82,8 @@ if (have_posts()) {
 
     if (wc_get_loop_prop('total')) {
         $i=0;
-        while (have_posts()) {
-            the_post();
+        while ($featured_products->have_posts()) {
+            $featured_products->the_post();
 
 
             /**
