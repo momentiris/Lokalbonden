@@ -137,6 +137,41 @@ function sv_change_product_price_display($price)
 
 add_filter( 'woocommerce_get_price_html', 'sv_change_product_price_display' );
 
+
 // CHECKOUT PAGE
 
 add_action('woocommerce_checkout_before_customer_details', 'checkout_slider');
+
+// Change stuff regarding checkout page input fields
+add_filter('woocommerce_default_address_fields', 'custom_default_address_fields', 20, 1);
+function custom_default_address_fields( $address_fields ){
+
+    if(  is_checkout()){
+        // Change class of field+input
+        $address_fields['postcode']['class']   = array('form-row-first'); //  50%
+        $address_fields['city']['class']       = array('form-row-last');  //  50%
+
+        // Change label of input field
+        $address_fields['first_name']['label']  = ('Förnamn');
+        $address_fields['last_name']['label']   = ('Efternamn');
+        $address_fields['postcode']['label']    = ('Postadress');
+        $address_fields['city']['label']        = ('Postort');
+        $address_fields['address_1']['label']   = ('Gatuadress');
+        $address_fields['company']['label']     = ('Företag');
+
+
+
+        // Change placeholder of input field
+        $address_fields['address_2']['placeholder']   = ('');
+    }
+    return $address_fields;
+};
+
+
+// Remove country-field. We only ship in Sweden(Göteborg)
+add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' );
+
+function custom_override_checkout_fields( $fields ) {
+    unset($fields['billing']['billing_country']);
+    return $fields;
+}
