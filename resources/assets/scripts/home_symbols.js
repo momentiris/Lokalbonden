@@ -1,7 +1,9 @@
 export default (function() {
-  const symbols = Array.from(document.querySelectorAll(".symbols"));
+  if (window.location.pathname == "/") {
+    const symbols = Array.from(document.querySelectorAll(".symbols"));
 
-  symbols.forEach(symbol => {
-    symbol.classList.add("symbols--active");
-  });
+    symbols.forEach(symbol => {
+      symbol.classList.add("symbols--active");
+    });
+  }
 })();
