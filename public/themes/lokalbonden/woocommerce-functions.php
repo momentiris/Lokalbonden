@@ -137,7 +137,6 @@ function sv_change_product_price_display($price)
 
 add_filter( 'woocommerce_get_price_html', 'sv_change_product_price_display' );
 
-
 // CHECKOUT PAGE
 
 add_action('woocommerce_checkout_before_customer_details', 'checkout_slider');

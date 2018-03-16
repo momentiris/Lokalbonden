@@ -75,4 +75,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 
   </form>
 </div> <!-- end of woocommerce-cart-wrapper -->
-<?php do_action( 'woocommerce_after_checkout_form', $checkout ); ?>
+<?php do_action('woocommerce_after_checkout_form', $checkout); ?>
