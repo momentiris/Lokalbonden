@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 
     <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDS85uYpb34YgtRJIHw2dMxJR7tfdauJ0g"></script>
 
 </head>
 <body <?php body_class(); ?>>
