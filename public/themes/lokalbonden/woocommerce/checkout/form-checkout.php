@@ -26,8 +26,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
   <?php
 
-  wc_print_notices();
-
   // do_action( 'woocommerce_before_checkout_form', $checkout );
 
   // If checkout registration is disabled and not logged in, the user cannot checkout
@@ -62,7 +60,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
       <div class="payment-section">
 
-        <h3 id="order_review_heading"><?php _e( 'Your order', 'woocommerce' ); ?></h3>
+        <h3 id="order_review_heading"><?php _e( 'Din beställning', 'woocommerce' ); ?></h3>
 
         <?php do_action( 'woocommerce_checkout_before_order_review' ); ?>
 

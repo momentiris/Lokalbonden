@@ -160,9 +160,9 @@ function custom_default_address_fields( $address_fields ){
         $address_fields['company']['label']     = ('Företag');
 
 
-
         // Change placeholder of input field
         $address_fields['address_2']['placeholder']   = ('');
+        $address_fields['address_1']['placeholder']   = ('');
     }
     return $address_fields;
 };
@@ -173,5 +173,19 @@ add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' );
 
 function custom_override_checkout_fields( $fields ) {
     unset($fields['billing']['billing_country']);
+    unset($fields['shipping']['shipping_country']);
     return $fields;
+
+}
+
+add_filter( 'woocommerce_checkout_fields', 'webendev_woocommerce_checkout_fields' );
+/**
+ * Change Order Notes Placeholder Text - WooCommerce
+ *
+ */
+function webendev_woocommerce_checkout_fields( $fields ) {
+
+	$fields['order']['order_comments']['label'] = 'Särskillda önskemål kring beställning';
+	$fields['order']['order_comments']['placeholder'] = '';
+	return $fields;
 }

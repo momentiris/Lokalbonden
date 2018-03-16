@@ -27,39 +27,53 @@
 
 }
 
+.woocommerce-form__label.woocommerce-form__label-for-checkbox.checkbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.woocommerce-form__label.woocommerce-form__label-for-checkbox.checkbox span {
+ display: flex;
+ justify-content: center;
+ margin: auto;
+ margin-left: 10px;
+}
+
 @media (min-width: 767px) {
 
-        .checkout-page-content {
+  .checkout-page-content {
 
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 
-          #customer_details {
-            width: 48%;
+    #customer_details {
+      width: 48%;
 
-            .col-1 {
-              width: 100%;
-            }
-            .col-2 {
-              width: 100%;
-            }
+      .col-1 {
+        width: 100%;
+      }
+      .col-2 {
+        width: 100%;
+      }
 
-            .woocommerce-billing-fields__field-wrapper {
-              width: 100%;
-            }
-            }
-          }
+      .woocommerce-billing-fields__field-wrapper {
+        width: 100%;
+      }
+    }
+  }
 
-          .payment-section {
-            width: 48%;
+  .payment-section {
+    width: 48%;
 
-            .woocommerce-checkout-review-order {
-              width: 100%;
-            }
-          }
+    .woocommerce-checkout-review-order {
+      width: 100%;
+    }
+  }
 
+}
 
-
-
-        }
+.woocommerce-checkout .woocommerce .woocommerce-message {
+    display:none !important;
+}
