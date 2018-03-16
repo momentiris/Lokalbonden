@@ -126,18 +126,38 @@ if (! defined('ABSPATH')) {
             }
             ?>
 
+
+            <tr>
+              <td colspan="6" class="addons">
+                <?php
+                /**
+                 * Cart addons hook.
+                 *
+                 * @hooked get_cart_addons
+                 */
+                  do_action('woocommerce_cart_addons'); ?>
+              </td>
+            </tr>
+
+
+            <tr>
+              <td colspan="6" class="actions">
+
           <!-- Update cart -->
 					<button type="submit" class="button" name="update_cart" value="<?php esc_attr_e('Update cart', 'woocommerce'); ?>"><?php esc_html_e('Update cart', 'woocommerce'); ?></button>
 
           <!-- After cart -->
-
 					<?php do_action('woocommerce_cart_actions'); ?>
 
 					<?php wp_nonce_field('woocommerce-cart'); ?>
 				</td>
 			</tr>
 
-			<?php do_action('woocommerce_after_cart_contents'); ?>
+			<?php
+
+      // die(var_dump($_POST));
+
+      do_action('woocommerce_after_cart_contents'); ?>
 		</tbody>
 	</table>
 	<?php do_action('woocommerce_after_cart_table'); ?>
@@ -160,4 +180,3 @@ if (! defined('ABSPATH')) {
 
 <!-- After total cart -->
 <?php do_action('woocommerce_after_cart'); ?>
-
