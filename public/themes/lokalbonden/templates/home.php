@@ -21,6 +21,7 @@ $image_hero = $fields['background_image_1'];
       </svg>
     </h2>
       <div class="symbols_wrap">
+
         <div class="symbols symbol_3"></div>
         <div class="symbols symbol_2"></div>
         <div class="symbols symbol_1"></div>
