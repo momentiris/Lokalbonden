@@ -16,19 +16,19 @@
  * @version     3.0.0
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
+if (! defined('ABSPATH')) {
+    exit;
 }
 
 if ($addon_products):
 
-if ( $addon_products->have_posts() ) : ?>
+if ($addon_products->have_posts()) : ?>
 
     <?php while ($addon_products->have_posts()):
         $post = get_post($addon_products->the_post());
         $product = wc_get_product($post->ID);
         // die(var_dump($product));
-        // wc_get_template_part('content', 'product'); ?>
+        // wc_get_template_part('content', 'product');?>
 
           <input type="checkbox" name="check[<?php echo $product->get_id(); ?>]" id="check-<?php echo $product->get_id(); ?>" >
           <label for="check[<?php echo $product->get_id(); ?>]"><?php echo $product->get_name().' '.$product->get_price().' kr' ?></label>
