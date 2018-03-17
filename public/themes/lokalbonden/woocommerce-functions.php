@@ -184,7 +184,7 @@ add_filter( 'woocommerce_checkout_fields', 'webendev_woocommerce_checkout_fields
  */
 function webendev_woocommerce_checkout_fields( $fields ) {
 
-	$fields['order']['order_comments']['label'] = 'Särskillda önskemål kring beställning';
-	$fields['order']['order_comments']['placeholder'] = '';
+	$fields['order']['order_comments']['label'] = 'Särskillda orderuppgifter';
+	$fields['order']['order_comments']['placeholder'] = ' Allergier, generella önskemål..';
 	return $fields;
 }

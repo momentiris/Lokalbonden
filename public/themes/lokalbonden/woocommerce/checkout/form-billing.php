@@ -52,7 +52,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php do_action( 'woocommerce_after_checkout_billing_form', $checkout ); ?>
 </div>
 
-<?php if ( ! is_user_logged_in() && $checkout->is_registration_enabled() ) : ?>
+<!-- REMOVED ABILITY TO "CREATE ACCOUNT" ON CHECKOUT PAGE -->
+<!-- <?php if ( ! is_user_logged_in() && $checkout->is_registration_enabled() ) : ?>
 	<div class="woocommerce-account-fields">
 		<?php if ( ! $checkout->is_registration_required() ) : ?>
 
@@ -62,9 +63,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 				</label>
 			</p>
 
-		<?php endif; ?>
+		<?php endif; ?> -->
 
-		<?php do_action( 'woocommerce_before_checkout_registration_form', $checkout ); ?>
+		<!-- <?php do_action( 'woocommerce_before_checkout_registration_form', $checkout ); ?>
 
 		<?php if ( $checkout->get_checkout_fields( 'account' ) ) : ?>
 
@@ -75,8 +76,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<div class="clear"></div>
 			</div>
 
-		<?php endif; ?>
-
+		<?php endif; ?> -->
+<!--
 		<?php do_action( 'woocommerce_after_checkout_registration_form', $checkout ); ?>
 	</div>
-<?php endif; ?>
+<?php endif; ?> -->
