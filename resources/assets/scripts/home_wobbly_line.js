@@ -15,8 +15,8 @@ export default (function() {
     * @return {[null]}
     */
     function intersectionCallback(element) {
-
-      element[0].intersectionRatio >= 1 ? wobblyLine.classList.add('wobble-active') : wobblyLine.classList.remove('wobble-active');
+      if (element[0].intersectionRatio === 1)
+        wobblyLine.classList.add('wobble--active');
     }
 
     var observer = new IntersectionObserver(intersectionCallback, options);

@@ -1,11 +1,14 @@
 <?php
-/**
- * Array of custom post types.
+
+/*
+ * This file is part of Lokalbonden.
  *
- * ['plural name', 'singular name']
+ * MIT License, Lokalbonden special squad.
  *
- * @var array
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
+
 $customPostTypes = [
     ['Clients', 'Client'],
     ['Orders', 'Order'],
@@ -18,5 +21,5 @@ $customPostTypes = [
  * @var [string]
  */
 foreach ($customPostTypes as $type) {
-    do_action('CPT', $type[0], $type[1] );
+    do_action('CPT', $type[0], $type[1]);
 }

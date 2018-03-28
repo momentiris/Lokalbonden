@@ -1,0 +1,49 @@
+.woocommerce-cart .subpageTitle {
+  background-image: url('/themes/lokalbonden/media/bg_2.jpg');
+}
+
+.woocommerce-message {
+  border-top-color: $forest-green;
+  font-family: $paragraph;
+  text-align: center;
+
+  &::before {
+    color: $forest-green;
+    position: static;
+    margin-right: 1rem;
+  }
+}
+
+.woocommerce-cart-wrapper {
+  font-family: $paragraph;
+  margin: 2rem auto;
+
+  @include bp(large) {
+    width: 60%;
+  };
+  @include bp(medium) {
+    width: 80%;
+  };
+  @include bp(small) {
+    width: 90%;
+  };
+}
+
+.checkout-menu-container {
+  padding: 1rem 0;
+  .menu {
+    border-bottom: 3px solid $forest-green;
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    padding-bottom: 1rem;
+
+    .menu-item, a {
+      color: $forest-green;
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-decoration: none;
+      pointer-events: none;
+    }
+  }
+}

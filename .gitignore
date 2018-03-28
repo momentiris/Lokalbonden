@@ -2,6 +2,7 @@
 .env
 .idea
 .vagrant
+.php_cs.cache
 Homestead.json
 Homestead.yaml
 node_modules

@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 
     <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDS85uYpb34YgtRJIHw2dMxJR7tfdauJ0g"></script>
 
 </head>
 <body <?php body_class(); ?>>
@@ -19,10 +20,12 @@
         <span class="hamburger-inner"></span>
       </span>
     </button>
-    <?php wp_nav_menu([
+    <?php
+     wp_nav_menu([
       'theme_location' => 'primary-menu',
       'container_class' => 'menu-container',
       'after' => '<svg viewBox="0 0 75 10" preserveAspectRatio="none" class="wobbly_nav"><path d="M.938 5.066s8.08-6.447 16.6-.932c5.99 3.877 9.917 4.117 15.618-.119C38.019.37 40.797 6.412 46.526 5.61 56.222 4.341 58.229.405 62.49 5.066c3.428 4.117 10.969-2.563 10.969-2.563" fill="none"/></svg>'
-    ]);  ?>
+    ]);
+    ?>
   </nav>
 <main>
