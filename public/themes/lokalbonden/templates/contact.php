@@ -5,20 +5,39 @@ Template Name: Contact
 
 get_header();
 
-// Define what posts we are looking for
-$contactPosts = get_posts(array('category_name' => 'Contact'));
+$contactFields = get_fields();
 
-// Loops the posts with our defined search parameters
-foreach ( $contactPosts as $post ) : setup_postdata( $post ); ?>
+?>
 
-<h2><?php the_title();?></h2>                      <!-- Get post title -->
-<p><?php the_content(); ?></p>                      <!-- Get post content -->
+<div class="header" style="background-image:url('<?php echo $contactFields['page_title_background']; ?>'); background-color:tomato;">
+  <div class="header_text">
+    <h1 class="title"><?php echo $contactFields['page_title'] ?></h1>
+  </div>
+</div>
 
-<?php if (has_category('Adress', $post)): ?>        <!-- Checks if post is certain category -->
-  <p>Post with the specified category</p>
-<?php endif; ?>
+<div class="section1">
+  <p><?php echo $contactFields['section1_paragraph'] ?></p>
+</div>
 
-<?php endforeach;
+<section class="section2">
+  <div class="column-left">
+    <p><?php echo $contactFields['phone']; ?></p>
+    <p><?php echo $contactFields['email']; ?></p>
+  </div>
 
-// Resets post searching parameters to default
-wp_reset_postdata();?>
+  <div class="column-center">
+    <img class="wobbly-kassarna" src="/themes/lokalbonden/assets/images/svg/wobbly_kassarna.svg">
+  </div>
+
+  <div class="column-right">
+    <!-- <form class="" action="index.html" method="post">
+      <input class="button" type="text" name="" value="" placeholder="namn">
+      <input class="button" type="text" name="" value="" placeholder="e-post">
+      <textarea placeholder="Meddelande" class="button" name="name" rows="8" cols="80"></textarea>
+      <button class="button" type="button" name="button">Skicka</button>
+    </form> -->
+    <?php echo do_shortcode("[wpforms id='228' title='false' description='false']"); ?>
+  </div>
+
+</section>
+<?php get_footer();?>

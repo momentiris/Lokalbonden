@@ -1,0 +1,14 @@
+.contactform {
+  input,
+  textarea {
+    border: 1px solid $dark-green;
+    background-color: $dark-green;
+    text-align: center;
+    font-family: $button;
+  }
+  .submit {
+    border-radius: 10px !important;
+    background-color: $dark-green !important;
+    color: $white !important;
+  }
+}
