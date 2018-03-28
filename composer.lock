@@ -1258,6 +1258,28 @@
             "homepage": "https://wordpress.org/plugins/woocommerce/"
         },
         {
+            "name": "wpackagist-plugin/wpforms-lite",
+            "version": "1.4.5.1",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wpforms-lite/",
+                "reference": "tags/1.4.5.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wpforms-lite.1.4.5.1.zip",
+      
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wpforms-lite/"
+              }
+        ],
+        {
             "name": "wpackagist-plugin/woocommerce-gateway-stripe",
             "version": "4.0.7",
             "source": {
@@ -1275,6 +1297,7 @@
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wpforms-lite/"
             "homepage": "https://wordpress.org/plugins/woocommerce-gateway-stripe/"
         }
     ],
