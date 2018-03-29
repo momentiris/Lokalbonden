@@ -25,10 +25,6 @@ if (! defined('ABSPATH')) {
 <div class="woocommerce-cart-wrapper">
 
 <?php
-  // Print WooCommerce messages
-  wc_print_notices();
-
-
   // Before cart hook
   do_action('woocommerce_before_cart'); ?>
 
@@ -41,7 +37,7 @@ if (! defined('ABSPATH')) {
 		<thead>
 			<tr>
 				<th class="product-remove">&nbsp;</th>
-				<th class="product-thumbnail">&nbsp;</th>
+				<!-- <th class="product-thumbnail">&nbsp;</th> -->
 				<th class="product-name"><?php esc_html_e('Product', 'woocommerce'); ?></th>
 				<th class="product-price"><?php esc_html_e('Price', 'woocommerce'); ?></th>
 				<th class="product-quantity"><?php esc_html_e('Quantity', 'woocommerce'); ?></th>
@@ -72,14 +68,14 @@ if (! defined('ABSPATH')) {
                                 ), $cart_item_key); ?>
 						</td>
 
-						<td class="product-thumbnail"><?php
+						<!-- <td class="product-thumbnail"><?php
                         $thumbnail = apply_filters('woocommerce_cart_item_thumbnail', $_product->get_image(), $cart_item, $cart_item_key);
 
                     if (! $product_permalink) {
                         echo $thumbnail;
                     } else {
                         printf('<a href="%s">%s</a>', esc_url($product_permalink), $thumbnail);
-                    } ?></td>
+                    } ?></td> -->
 
 						<td class="product-name" data-title="<?php esc_attr_e('Product', 'woocommerce'); ?>"><?php
                         if (! $product_permalink) {
@@ -128,23 +124,10 @@ if (! defined('ABSPATH')) {
 
 
             <tr>
-              <td colspan="6" class="addons">
-                <?php
-                /**
-                 * Cart addons hook.
-                 *
-                 * @hooked get_cart_addons
-                 */
-                  do_action('woocommerce_cart_addons'); ?>
-              </td>
-            </tr>
-
-
-            <tr>
               <td colspan="6" class="actions">
 
           <!-- Update cart -->
-					<button type="submit" class="button" name="update_cart" value="<?php esc_attr_e('Update cart', 'woocommerce'); ?>"><?php esc_html_e('Update cart', 'woocommerce'); ?></button>
+					<button type="submit" class="button hidden" name="update_cart" value="<?php esc_attr_e('Update cart', 'woocommerce'); ?>"><?php esc_html_e('Update cart', 'woocommerce'); ?></button>
 
           <!-- After cart -->
 					<?php do_action('woocommerce_cart_actions'); ?>
@@ -153,15 +136,12 @@ if (! defined('ABSPATH')) {
 				</td>
 			</tr>
 
-			<?php
-
-      // die(var_dump($_POST));
-
-      do_action('woocommerce_after_cart_contents'); ?>
+			<?php do_action('woocommerce_after_cart_contents'); ?>
 		</tbody>
 	</table>
-	<?php do_action('woocommerce_after_cart_table'); ?>
 </form>
+
+<?php do_action('woocommerce_after_cart_table'); ?>
 
 <!-- Cart totals -->
 <div class="cart-collaterals">
