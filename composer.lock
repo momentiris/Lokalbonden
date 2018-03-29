@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "82e54951b728b7c4afa62825352f3f6a",
+    "content-hash": "e88097400199c9eced032139ade2c383",
     "packages": [
         {
             "name": "composer/installers",
@@ -1218,6 +1218,26 @@
             "homepage": "https://wordpress.org/plugins/jetpack/"
         },
         {
+            "name": "wpackagist-plugin/really-simple-ssl",
+            "version": "2.5.26",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/really-simple-ssl/",
+                "reference": "tags/2.5.26"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/really-simple-ssl.2.5.26.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/really-simple-ssl/"
+        },
+        {
             "name": "wpackagist-plugin/woocommerce",
             "version": "3.3.3",
             "source": {
@@ -1238,6 +1258,28 @@
             "homepage": "https://wordpress.org/plugins/woocommerce/"
         },
         {
+            "name": "wpackagist-plugin/wpforms-lite",
+            "version": "1.4.5.1",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wpforms-lite/",
+                "reference": "tags/1.4.5.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wpforms-lite.1.4.5.1.zip",
+      
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wpforms-lite/"
+              }
+        ],
+        {
             "name": "wpackagist-plugin/woocommerce-gateway-stripe",
             "version": "4.0.7",
             "source": {
@@ -1255,6 +1297,7 @@
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wpforms-lite/"
             "homepage": "https://wordpress.org/plugins/woocommerce-gateway-stripe/"
         }
     ],

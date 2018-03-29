@@ -1,35 +1,40 @@
 // This is where all fonts we use are declared
 
 // Logos, HeroPage-text etc
-@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+@import url("https://fonts.googleapis.com/css?family=Amatic+SC");
 // Use: font-family: 'Amatic SC', cursive;
 
 // NavBar-text
 
-@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,900');
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,900");
 
 // Use: font-family: 'Roboto', sans-serif;
 
-@import url('https://fonts.googleapis.com/css?family=Abel');
+@import url("https://fonts.googleapis.com/css?family=Abel");
 
 // Use: font-family: 'Abel', sans-serif;
 
-$display: 'Amatic SC', cursive;
+$display: "Amatic SC", cursive;
 
-h1 {
-  font-family: $display;
-}
+$paragraph: "Roboto", sans-serif;
 
-$paragraph: 'Roboto', sans-serif;
-
-$button: 'Abel', sans-serif;
+$button: "Abel", sans-serif;
 
 $bodyWeight: 100;
 $preambleWeight: 300;
 $menuWeight: 900;
 
-
 $text-small: 1rem;
 $text-medium: 2rem;
 $text-large: 3rem;
 $text-larger: 4rem;
+
+h1 {
+  font-family: $display;
+  color: $dark-green;
+}
+
+p {
+  font-family: $paragraph;
+  color: $dark-green;
+}
