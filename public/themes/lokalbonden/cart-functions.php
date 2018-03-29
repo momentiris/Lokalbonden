@@ -38,4 +38,6 @@ function get_cart_addons()
 
     require_once __DIR__.'/woocommerce/cart/content-addons.php';
 }
-add_action('woocommerce_cart_addons', 'get_cart_addons');
+
+remove_action('woocommerce_cart_collaterals', 'woocommerce_cross_sell_display');
+add_action('woocommerce_after_cart_table', 'get_cart_addons');

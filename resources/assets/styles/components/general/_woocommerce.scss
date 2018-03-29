@@ -47,3 +47,14 @@
     }
   }
 }
+
+.woocommerce button.button.hidden, .woocommerce-page table.cart td.actions .button.hidden {
+  display: none;
+  @include bp(small) {
+    display: none;
+  };
+}
+
+.woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce-cart .wc-proceed-to-checkout a.checkout-button, .woocommerce-checkout .wc-proceed-to-checkout a.checkout-button, .return-to-shop .wc-backward {
+  @extend .new-button;
+}
