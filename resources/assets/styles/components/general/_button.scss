@@ -12,3 +12,67 @@
   font-size: 25px;
   margin: .5rem;
 }
+
+.new-button {
+  background-color: transparent;
+  border: 2px solid $forest-green;
+  border-radius: 3px;
+  box-shadow: none;
+  color: $forest-green;
+  display: inline-block;
+  font-family: $display;
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1.5;
+  margin-bottom: 0;
+  padding: 1rem 1rem;
+  text-align: center;
+  transition: all 0.4s;
+  width: auto;
+  z-index: 1;
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:before,
+  &:after {
+    content: '';
+    border-style: solid;
+    position: absolute;
+    z-index: 5;
+    border-radius: 2px;
+    box-sizing: content-box;
+    border-color: $price-green;
+    transition: all 0.4s;
+  }
+
+  &:before {
+    width: 0;
+    height: 100%;
+    border-width: 3px 0 3px 0;
+    top: -3px;
+    left: 0;
+    transition-delay: 0.05s;
+  }
+
+  &:after {
+    width: 100%;
+    height: 0;
+    border-width: 0 3px 0 3px;
+    top: 0;
+    left: -3px;
+  }
+
+  &:hover {
+    background-color: inherit;
+    border-color: transparent;
+    color: #4CA39C;
+    &:before {
+      width: 100%;
+    }
+    &:after {
+      height: 100%;
+    }
+  }
+}
