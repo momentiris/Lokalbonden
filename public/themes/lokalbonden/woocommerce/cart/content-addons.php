@@ -22,17 +22,26 @@ if (! defined('ABSPATH')) {
 
 if ($addon_products):
 
-if ($addon_products->have_posts()) : ?>
-
+  if ($addon_products->have_posts()) : ?>
+<div class="addons">
+  <h2>Tillvalsprodukter</h2>
+  <div class="addons-content">
     <?php while ($addon_products->have_posts()):
         $post = get_post($addon_products->the_post());
         $product = wc_get_product($post->ID);
-        // die(var_dump($product));
-        // wc_get_template_part('content', 'product');?>
+        ?>
 
-          <input type="checkbox" name="check[<?php echo $product->get_id(); ?>]" id="check-<?php echo $product->get_id(); ?>" >
-          <label for="check[<?php echo $product->get_id(); ?>]"><?php echo $product->get_name().' '.$product->get_price().' kr' ?></label>
+        <a href="?add-to-cart=<?php echo $product->get_id(); ?>">
+          <div class="addon-product">
+          <?php echo $product->get_image(); ?>
+          <p><?php echo $product->get_name() ?></p>
+          <p><?php echo $product->get_price().' kr' ?></p>
+        </div>
+        </a>
 
     <?php endwhile; ?>
-  <?php endif; ?>
-<?php endif; ?>
+  </div>
+</div>
+
+  <?php endif;
+ endif; ?>

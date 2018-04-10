@@ -1,4 +1,54 @@
+.woocommerce-cart {
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  h2 {
+    font-family: $display;
+    font-size: 3rem;
+    &.space {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
 .woocommerce table.shop_table {
   border: none;
   margin: 1rem 0;
+
+  td {
+    border-top: 1px solid transparent;
+  }
+}
+
+.addons {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.addons-content {
+  display: flex;
+  justify-content: space-around;
+  margin: 1.5rem 0;
+  @include bp(small) {
+    flex-direction: column;
+  };
+
+  .addon-product {
+    img {
+      margin: 0.5rem 0;
+    }
+    p:last-of-type {
+      font-weight: bold;
+    }
+  }
+}
+
+.cart-collaterals .cart_totals {
+  margin: 2rem 0;
+}
+
+.wc-proceed-to-checkout {
+  text-align: right;
 }
