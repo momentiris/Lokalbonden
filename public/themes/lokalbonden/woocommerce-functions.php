@@ -166,7 +166,13 @@ function custom_default_address_fields( $address_fields ){
     return $address_fields;
 };
 
+add_filter( 'woocommerce_checkout_fields' , 'custom_phone_email_label' );
+function custom_phone_email_label( $fields ) {
+    $fields['billing']['billing_phone']['label'] = ('Telefonnummer');
+    $fields['billing']['billing_email']['label'] = ('Emailaddress');
+    return $fields;
 
+}
 // Remove country-field. We only ship in Sweden(Göteborg)
 add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' );
 
@@ -184,7 +190,8 @@ add_filter( 'woocommerce_checkout_fields', 'webendev_woocommerce_checkout_fields
  */
 function webendev_woocommerce_checkout_fields( $fields ) {
 
-	$fields['order']['order_comments']['label'] = 'Särskillda önskemål kring beställning';
-	$fields['order']['order_comments']['placeholder'] = '';
+	$fields['order']['order_comments']['label'] = 'Särskillda orderuppgifter';
+	$fields['order']['order_comments']['placeholder'] = 'Allergier, generella önskemål..';
+	$fields['order']['order_comments']['style'] = "resize:none;";
 	return $fields;
 }

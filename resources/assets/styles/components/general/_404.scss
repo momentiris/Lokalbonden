@@ -1,0 +1,50 @@
+.error-page {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../../../../../public/themes/lokalbonden/media/plants-small.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.error-page-content {
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 320px;
+  padding: 15px;
+  color: $white;
+  background-color: rgba(42, 42, 42, 0.51);
+
+
+  h1 {
+    text-align: center;
+    font-family: $display;
+    color: $white;
+    font-size: 120px;
+    margin-top: 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.83);
+  }
+
+  p {
+    padding-left: 10px;
+    font-size: 25px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.83);
+  }
+
+  .button {
+    width: auto;
+  }
+
+
+}
+
+.error-message {
+  font-family: $paragraph;
+}
