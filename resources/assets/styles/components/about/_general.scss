@@ -1,0 +1,32 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.about_page{
+  height: 100%;
+  width: 100%;
+}
+.sections{
+  box-shadow: inset 0 0 10px #000000;
+  background-image: url("../../../../../public/themes/lokalbonden/media/test.png");
+  background-color: $white;
+  background-repeat: repeat;
+}
+.section_border_wrapper{
+  @include bp(small){
+    display: none;
+  }
+  .section_border{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 2s ease;
+  }
+  .section_border_active{
+    animation: draw 20s linear;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+}
