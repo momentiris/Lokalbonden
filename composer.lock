@@ -4,9 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-  
-    "content-hash": "ed35cf88983c32475554cbce7782ff54",
-
+    "content-hash": "ab0732bfd6a2ccab395d9debce614ad6",
     "packages": [
         {
             "name": "composer/installers",
@@ -1200,6 +1198,26 @@
             "homepage": "https://wordpress.org/plugins/advanced-custom-fields/"
         },
         {
+            "name": "wpackagist-plugin/hide-updates",
+            "version": "1.0",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/hide-updates/",
+                "reference": "tags/1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/hide-updates.1.0.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/hide-updates/"
+        },
+        {
             "name": "wpackagist-plugin/jetpack",
             "version": "5.9",
             "source": {
@@ -1220,6 +1238,26 @@
             "homepage": "https://wordpress.org/plugins/jetpack/"
         },
         {
+            "name": "wpackagist-plugin/order-delivery-date-for-woocommerce",
+            "version": "3.4.2",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/order-delivery-date-for-woocommerce/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/order-delivery-date-for-woocommerce.zip?timestamp=1523273639",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/order-delivery-date-for-woocommerce/"
+        },
+        {
             "name": "wpackagist-plugin/really-simple-ssl",
             "version": "2.5.26",
             "source": {
@@ -1238,6 +1276,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/really-simple-ssl/"
+        },
+        {
+            "name": "wpackagist-plugin/woo-order-export-lite",
+            "version": "1.5.4",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/woo-order-export-lite/",
+                "reference": "tags/1.5.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/woo-order-export-lite.1.5.4.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/woo-order-export-lite/"
         },
         {
             "name": "wpackagist-plugin/woocommerce",
