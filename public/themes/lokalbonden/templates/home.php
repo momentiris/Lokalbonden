@@ -5,6 +5,10 @@ Template Name: Home
 get_header();
 $fields = get_fields();
 $image_hero = $fields['background_image_1'];
+
+
+
+
 ?>
 <div class="swiper__outer">
   <h1 class="home-title" ><?php echo $fields['header_text'] ?></h1>
@@ -15,7 +19,6 @@ $image_hero = $fields['background_image_1'];
 
     </div>
     <div class="swiper-slide " style="background-image: url('<?php the_field('background_image_2'); ?>')">
-
     </div>
     <div class="swiper-slide " style="background-image: url('<?php the_field('background_image_3'); ?>')">
 
