@@ -1,14 +1,47 @@
-.contactform {
-  input,
-  textarea {
-    border: 1px solid $dark-green;
-    background-color: $dark-green;
-    text-align: center;
-    font-family: $button;
+.wpcf7 {
+  display: flex;
+  justify-content: center;
+
+  .form-section-1 {
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+    margin-bottom: 1%;
+    .form-input {
+      width: 95%;
+    }
   }
-  .submit {
-    border-radius: 10px !important;
-    background-color: $dark-green !important;
-    color: $white !important;
+  .form-section-2 {
+    .form-message {
+      width: 100%;
+      height: 80px;
+    }
+  }
+
+  .form-input,
+  .form-message {
+    outline: none;
+    border: none;
+    background-color: $forest-green;
+    text-align: center;
+    font-family: $paragraph;
+    border-radius: 40px;
+    padding: 3% 0;
+    font-size: 18px;
+
+    &[type="text"],
+    &[type="email"],
+    &[name="text"] {
+      color: $white;
+    }
+    &:focus {
+      background-color: $dark-green;
+    }
+
+    // &[type="text"] {
+    // }
+
+    // .wpcf7-submit {
+    // }
   }
 }
