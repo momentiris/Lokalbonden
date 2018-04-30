@@ -214,7 +214,7 @@ function bbloomer_add_checkout_tickbox() {
 
 <p class="form-row terms">
 <input type="checkbox" class="input-checkbox" name="deliverycheck" id="deliverycheck">
-<label for="deliverycheck" class="checkbox">Jag har läst och godkänner <a href="http://localhost:8888/anvandarvillkor/" target="_blank">villkoren</a></label>
+<label for="deliverycheck" class="checkbox terms_checkout">Jag är över 18 år & har läst och godkänner <a href="http://localhost:8888/anvandarvillkor/" target="_blank">villkoren</a> <abbr class="required" title="required">*</abbr></label>
 </p>
 
 
