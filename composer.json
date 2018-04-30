@@ -8,14 +8,14 @@
         "wordplate/framework": "^6.2",
         "wordplate/plate": "^3.0",
         "wpackagist-plugin/advanced-custom-fields": "^5.6",
+        "wpackagist-plugin/contact-form-7": "^5.0",
         "wpackagist-plugin/hide-updates": "^1.0",
         "wpackagist-plugin/jetpack": "^5.8",
         "wpackagist-plugin/order-delivery-date-for-woocommerce": "^3.4",
         "wpackagist-plugin/really-simple-ssl": "^2.5",
         "wpackagist-plugin/woo-order-export-lite": "^1.5",
         "wpackagist-plugin/woocommerce": "^3.3",
-        "wpackagist-plugin/woocommerce-gateway-stripe": "^4.0",
-        "wpackagist-plugin/wpforms-lite": "1.4.5.1"
+        "wpackagist-plugin/woocommerce-gateway-stripe": "^4.0"
     },
     "repositories": [
         {
@@ -53,3 +53,4 @@
         "optimize-autoloader": true,
         "sort-packages": true
     }
+  }
