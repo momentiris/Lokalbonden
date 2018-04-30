@@ -4,11 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-<<<<<<< HEAD
-    "content-hash": "508c64ba4d77367016190e44d8443b34",
-=======
     "content-hash": "ab0732bfd6a2ccab395d9debce614ad6",
->>>>>>> woocommerce
     "packages": [
         {
             "name": "composer/installers",
@@ -1202,18 +1198,6 @@
             "homepage": "https://wordpress.org/plugins/advanced-custom-fields/"
         },
         {
-<<<<<<< HEAD
-            "name": "wpackagist-plugin/contact-form-7",
-            "version": "5.0.1",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/contact-form-7/",
-                "reference": "tags/5.0.1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/contact-form-7.5.0.1.zip",
-=======
             "name": "wpackagist-plugin/hide-updates",
             "version": "1.0",
             "source": {
@@ -1224,7 +1208,6 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/hide-updates.1.0.zip",
->>>>>>> woocommerce
                 "reference": null,
                 "shasum": null
             },
@@ -1232,11 +1215,7 @@
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-plugin",
-<<<<<<< HEAD
-            "homepage": "https://wordpress.org/plugins/contact-form-7/"
-=======
             "homepage": "https://wordpress.org/plugins/hide-updates/"
->>>>>>> woocommerce
         },
         {
             "name": "wpackagist-plugin/jetpack",
