@@ -50,7 +50,7 @@ $aboutFields = get_fields();
 
     <div class="third_section">
       <div class="button_wrap">
-        <button class="btn-find-us btn-green btn-border-o">Hitta oss</button>
+        <button class="button">Hitta oss</button>
       </div>
     </div>
 
