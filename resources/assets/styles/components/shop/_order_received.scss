@@ -1,0 +1,49 @@
+.woocommerce-thankyou-order-received {
+  font-family: $paragraph;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 1rem;
+
+}
+.woocommerce-order {
+  font-family: $paragraph;
+  padding: 1rem;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  .woocommerce-order-details {
+    width: 80%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  .woocommerce-customer-details {
+    width: 80%;
+    max-width: 70rem;
+    .woocommerce-column {
+      max-width: 500px;
+      h2 {
+        margin: 1rem;
+      }
+    }
+  }
+}
+
+.woocommerce-thankyou-order-details  {
+}
+.woocommerce ul.order_details {
+  margin: 1rem 1rem 1.5rem 1rem;
+
+}
+
+.woocommerce table.shop_table {
+
+}
+.woocommerce-columns--2 woocommerce-columns--addresses col2-set addresses {
+  adress {
+    border: none;
+  }
+}

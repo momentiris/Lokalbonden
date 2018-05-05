@@ -20,6 +20,7 @@
   display: flex;
   position: fixed;
   width: 100vw;
+  z-index: 2;
   @include bp(small) {
     flex-direction: column;
   };

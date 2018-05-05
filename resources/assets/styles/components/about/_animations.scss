@@ -1,0 +1,19 @@
+@keyframes draw {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes fillIn {
+  0% {
+    fill-opacity: 0;
+  }
+  50%{
+    fill-opacity: 1;
+  }
+  100% {
+    fill-opacity: .7;
+  }
+}
