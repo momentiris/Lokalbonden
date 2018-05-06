@@ -1,6 +1,7 @@
 footer {
   display: flex;
   flex-direction: column;
+
   p {
     color: $white;
   }
@@ -33,9 +34,10 @@ footer {
       flex-direction: column;
     }
 
-    h1 {
+    .footer-slogan {
       font-size: $text-medium;
       font-weight: $preambleWeight;
+      color: $white;
     }
   } //end .footer-section
 
