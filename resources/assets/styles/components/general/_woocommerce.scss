@@ -32,7 +32,7 @@
 .checkout-menu-container {
   padding: 1rem 0;
   .menu {
-    border-bottom: 3px solid $forest-green;
+    // border-bottom: 3px solid $forest-green;
     display: flex;
     justify-content: space-around;
     list-style-type: none;
@@ -45,6 +45,12 @@
       text-decoration: none;
       pointer-events: none;
     }
+
+    .current-menu-item {
+      &:after {
+        content: url('/themes/lokalbonden/assets/images/svg/wobbly_line_green.svg');
+      }
+    }
   }
 }
 
@@ -55,6 +61,10 @@
   };
 }
 
-.woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce-cart .wc-proceed-to-checkout a.checkout-button, .woocommerce-checkout .wc-proceed-to-checkout a.checkout-button, .return-to-shop .wc-backward {
-  @extend .new-button;
+.woocommerce button.button.alt:hover {
+  @extend .button:hover;
+}
+
+.woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce-cart .wc-proceed-to-checkout a.checkout-button, .woocommerce-checkout .wc-proceed-to-checkout a.checkout-button, .return-to-shop .wc-backward, .woocommerce button.button.alt {
+  @extend .button;
 }

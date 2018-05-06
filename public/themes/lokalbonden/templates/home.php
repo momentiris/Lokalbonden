@@ -60,8 +60,8 @@ $image_hero = $fields['background_image_1'];
         </div><!-- text_inner_wrap -->
       </div> <!-- presentation_content_text_wrap -->
     <div class="presentation_button_wrap">
-      <a href="#">Mer om oss!</a>
-      <a href="#">Till butiken!</a>
+      <a href="#" class="button small">Mer om oss!</a>
+      <a href="#" class="button small">Till butiken!</a>
 
     </div><!-- presentation_button_wrap -->
   </div><!-- presentation_content_wrap -->
@@ -87,13 +87,13 @@ $image_hero = $fields['background_image_1'];
     <div class="featured_product">
       <h1><?php echo $fields['product_1_name']; ?></h1>
       <p><?php echo $fields['product_1_description']; ?></p>
-      <a href="#" class="button">Beställ nu!</a>
+      <a href="#" class="button small">Beställ nu!</a>
     </div>
     <img class="shop_svg" src="/themes/lokalbonden/assets/images/svg/wobbly_kassarna.svg" alt="">
     <div class="featured_product">
       <h1><?php echo $fields['product_2_name']; ?></h1>
       <p><?php echo $fields['product_2_description']; ?></p>
-      <a href="#" class="button">Beställ nu!</a>
+      <a href="#" class="button small">Beställ nu!</a>
     </div>
   </div>
 
@@ -106,7 +106,7 @@ $image_hero = $fields['background_image_1'];
       <p>- <?php echo $fields['how_step_2']; ?></p>
       <p>- <?php echo $fields['how_step_3']; ?></p>
 
-      <a href="#" class="button">Till kassarna!</a>
+      <a href="#" class="button small">Till kassarna!</a>
   </div>
 
 
