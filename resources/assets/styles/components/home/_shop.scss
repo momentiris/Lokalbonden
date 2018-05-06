@@ -11,7 +11,8 @@
   background-color: $white;
 
   @include bp(small) {
-    height: 100vh;
+    height: auto;
+    padding: 1rem;
   }
   h1 {
     font-size: $text-larger;
@@ -27,8 +28,9 @@
     align-items: center;
     justify-content: center;
     @include bp(small) {
+      width: 100%;
       flex-direction: column;
-      height: 85vh;
+      height: auto;
     }
   }
 }

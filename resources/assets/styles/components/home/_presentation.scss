@@ -12,7 +12,7 @@
     background-image: none;
 
     background-position: -1000px;
-    height: 100vh;
+    height: auto;
   }
 
   .presentation_content_wrap {
@@ -23,9 +23,11 @@
     align-items: center;
     flex-flow: column wrap;
     @include bp(small) {
+      padding: 1rem;
       width: 100vw;
-      height: 100%;
-      padding-top: 1rem;
+
+
+
     }
     @include bp(large) {
       height: auto;
@@ -164,12 +166,14 @@
       display: flex;
       justify-content: center;
       margin-top: 1rem;
+
+
       @include bp(small) {
         width: 100vw;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        margin-top: 0;
+        margin: 1rem;
       }
       @include bp(large) {
         width: 50vw;
