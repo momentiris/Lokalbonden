@@ -32,7 +32,7 @@
 .checkout-menu-container {
   padding: 1rem 0;
   .menu {
-    border-bottom: 3px solid $forest-green;
+    // border-bottom: 3px solid $forest-green;
     display: flex;
     justify-content: space-around;
     list-style-type: none;
@@ -44,6 +44,12 @@
       font-weight: bold;
       text-decoration: none;
       pointer-events: none;
+    }
+
+    .current-menu-item {
+      &:after {
+        content: url('/themes/lokalbonden/assets/images/svg/wobbly_line_green.svg');
+      }
     }
   }
 }

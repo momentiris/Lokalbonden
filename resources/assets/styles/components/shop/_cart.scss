@@ -20,6 +20,10 @@
   td {
     border-top: 1px solid transparent;
   }
+
+  input[type="number"] {
+    font-size: 0.8rem;
+  }
 }
 
 .addons {
@@ -51,4 +55,12 @@
 
 .wc-proceed-to-checkout {
   text-align: right;
+}
+
+.cart-empty {
+  text-align: center;
+}
+
+.return-to-shop {
+  margin: 1rem;
 }

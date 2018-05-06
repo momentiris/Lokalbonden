@@ -13,15 +13,11 @@ export default (function () {
       }
     }
 
-  if (window.location.pathname == "/cart/") {
+  if (window.location.pathname == "/kundvagn/") {
     const quantity = document.querySelectorAll('input.qty');
-    const checkboxes = document.querySelectorAll('[type="checkbox"]');
 
     quantity.forEach(button => {
       button.addEventListener('change', updateCart);
-    });
-    checkboxes.forEach(checkbox => {
-      checkbox.addEventListener('change', addToCart);
     });
   };
 })();
