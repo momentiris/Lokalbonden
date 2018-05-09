@@ -229,3 +229,14 @@ function bbloomer_not_approved_delivery() {
         wc_add_notice( __( 'Ni måste godkänna Lokalbondens användarvillkor för att gå vidare med köpet' ), 'error' );
     }
 }
+
+
+
+add_filter( 'wc_stripe_payment_icons', 'change_my_icons' );
+function change_my_icons( $icons ) {
+        // var_dump( $icons ); to show all possible icons to change.
+    $icons['visa'] = '<img src="/mu-plugins/woocommerce/assets/images/icons/credit-cards/visa.svg" style="width: 25px;"/>';
+    $icons['mastercard'] = '<img src="/mu-plugins/woocommerce/assets/images/icons/credit-cards/mastercard.svg" style="width: 25px;"/>';
+    $icons['amex'] = '<img src="/mu-plugins/woocommerce/assets/images/icons/credit-cards/amex.svg" style="width: 25px;" />';
+    return $icons;
+}

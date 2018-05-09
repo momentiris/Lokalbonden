@@ -11,7 +11,7 @@ $image_hero = $fields['background_image_1'];
 
 ?>
 <div class="swiper__outer">
-  <h1 class="home-title" ><?php echo $fields['header_text'] ?></h1>
+  <h1 class="home-title title" ><?php echo $fields['header_text'] ?></h1>
 
 <div class="swiper-container">
   <div class="swiper-wrapper">
