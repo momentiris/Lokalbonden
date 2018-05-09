@@ -6,6 +6,7 @@
   h2 {
     font-family: $display;
     font-size: 3rem;
+    text-align: center;
     &.space {
       display: flex;
       justify-content: space-between;
@@ -13,17 +14,25 @@
   }
 }
 
-.woocommerce table.shop_table {
+.woocommerce table.shop_table, .woocommerce-cart .cart-collaterals .cart_totals table {
   border: none;
   margin: 1rem 0;
 
-  td {
-    border-top: 1px solid transparent;
+  td, th {
+    padding: 1rem 0;
   }
 
-  input[type="number"] {
-    font-size: 0.8rem;
+  td.product-quantity {
+    min-width: 3rem;
   }
+}
+.woocommerce .a.remove {
+  width: auto;
+}
+
+.after-cart {
+  display: flex;
+  justify-content: space-between;
 }
 
 .addons {
@@ -33,13 +42,19 @@
 
 .addons-content {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   margin: 1.5rem 0;
   @include bp(small) {
     flex-direction: column;
   };
 
+  a {
+    width: 33%;
+  }
+
   .addon-product {
+
     img {
       margin: 0.5rem 0;
     }
@@ -49,8 +64,15 @@
   }
 }
 
-.cart-collaterals .cart_totals {
-  margin: 2rem 0;
+// .cart-collaterals .cart_totals {
+//   margin: 2rem 0;
+// }
+
+.woocommerce .cart-collaterals, .woocommerce-page .cart-collaterals {
+  width: auto;
+  .cart_totals {
+    width: auto;
+  }
 }
 
 .wc-proceed-to-checkout {
