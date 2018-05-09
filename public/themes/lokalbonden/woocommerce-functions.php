@@ -139,8 +139,6 @@ add_filter( 'woocommerce_get_price_html', 'sv_change_product_price_display' );
 
 // CHECKOUT PAGE
 
-add_action('woocommerce_checkout_before_customer_details', 'checkout_slider');
-
 // Change stuff regarding checkout page input fields
 add_filter('woocommerce_default_address_fields', 'custom_default_address_fields', 20, 1);
 function custom_default_address_fields( $address_fields ){

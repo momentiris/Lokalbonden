@@ -9,15 +9,17 @@
  * file that was distributed with this source code.
  */
 
-function checkout_slider()
-{
-    wp_nav_menu([
-    'theme_location' => 'checkout-menu',
-    'container_class' => 'checkout-menu-container',
-    'fallback_cb' => false,
-  ]);
-};
-add_action('woocommerce_before_cart', 'checkout_slider');
+// function checkout_slider()
+// {
+//     wp_nav_menu([
+//     'theme_location' => 'checkout-menu',
+//     'container_class' => 'checkout-menu-container',
+//     'fallback_cb' => false,
+//   ]);
+// };
+// add_action('woocommerce_before_cart', 'checkout_slider');
+// add_action('woocommerce_before_order', 'checkout_slider');
+// add_action('woocommerce_checkout_before_customer_details', 'checkout_slider');
 
 function get_cart_addons()
 {

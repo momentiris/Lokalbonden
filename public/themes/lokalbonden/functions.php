@@ -133,3 +133,4 @@ wp_register_style( 'fontawesome', 'http:////maxcdn.bootstrapcdn.com/font-awesome
 wp_enqueue_style( 'fontawesome');
 }
 add_action( 'wp_enqueue_scripts', 'wmpudev_enqueue_icon_stylesheet' );
+
