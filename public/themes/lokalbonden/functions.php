@@ -24,6 +24,21 @@ add_action('after_setup_theme', function () {
     // Show the admin bar.
     show_admin_bar(false);
 
+    if (current_user_can('shop_manager')) {
+      // Remove menu items.
+      add_theme_support('plate-menu', [
+          'edit-comments.php', // comments
+          // 'index.php', // dashboard
+          'link-manager.php', // links
+          'upload.php', // media
+          'edit.php', // Posts
+          'edit.php?post_type=acf-field-group', // Custom fields
+          'tools.php', // Tools
+          'admin.php?page=wpcf7', // Contact form plugin
+          'users.php', // Users
+      ]);
+    }
+
 
     // Add post thumbnails support.
     add_theme_support('post-thumbnails');
@@ -72,60 +87,6 @@ add_filter('excerpt_more', function () {
 add_filter('excerpt_length', function () {
     return 101;
 });
-
-
-
-/**
-* create_post_type - Creates custom post types.
-*
-* @param  [string] $name
-* @param  [string] $nameSingular
-* @return [void]
-*/
-add_action('CPT', 'create_post_type', 10, 2);
-
-function create_post_type($name, $nameSingular)
-{
-    register_post_type(
-      $name,
-  array(
-    'labels' => array(
-      'name' => __($name),
-      'singular_name' => __($nameSingular)
-    ),
-    'public' => true,
-    'has_archive' => true,
-
-  )
-);
-}
-
-// Requires array of CPTs and executes the loop. See custom_post_types/customposttypes.php.
-require('custom_post_types/customposttypes.php');
-
-
-/**
-* Adds custom user role and privileges
-*
-* @return [I have no god damn idea.]
-*/
-add_role(
-    'master',
-    __('Master'),
-array(
-  'read' => true, // true allows this capability
-  'edit_posts' => true, // Allows user to edit their own posts
-  'edit_pages' => true, // Allows user to edit pages
-  'edit_others_posts' => true, // Allows user to edit others posts not just their own
-  'create_posts' => false, // Allows user to create new posts
-  'manage_categories' => false, // Allows user to manage post categories
-  'publish_posts' => true, // Allows the user to publish, otherwise posts stays in draft mode
-  'edit_themes' => false, // false denies this capability. User can’t edit your theme
-  'install_plugins' => false, // User cant add new plugins
-  'update_plugin' => false, // User can’t update any plugins
-  'update_core' => false // user cant perform core updates
-)
-);
 
 // Adding fontawesome icons FRO CARTICON
 // NOT USED RIGHT NOW
