@@ -1,7 +1,7 @@
 .info_section_wrap {
   background: url("../../../../../public/themes/lokalbonden/media/bg_truck.png");
-  background-size: 500px;
-  background-position: right;
+  background-size: 35%;
+  background-position: right bottom;
   background-repeat: no-repeat;
   width: 100vw;
   height: 85vh;
@@ -21,20 +21,24 @@
     align-items: flex-start;
     flex-direction: column;
     padding-left: 7%;
-    height: 55vh;
+    height: 60vh;
+    ul {
+      list-style: none;
+    }
     @include bp(small) {
       height: 60vh;
+      align-items: center;
     }
     h1 {
-      font-size: 5vw;
+      font-size: $text-larger;
       @include bp(small) {
-        font-size: $text-larger;
+
       }
     }
     p {
       padding-left: 1rem;
       font-family: $display;
-      font-size: 3vw;
+      font-size: $text-large;
       @include bp(small) {
         font-size: $text-medium;
       }
@@ -42,6 +46,7 @@
     a {
       margin-left: 1rem;
       width: 150px;
+      align-self: flex-start;
     }
   }
 }

@@ -102,10 +102,11 @@ $image_hero = $fields['background_image_1'];
 <div class="info_section_wrap">
   <div class="howto_content">
     <h1><?php echo $fields['how_header']; ?></h1>
-      <p>- <?php echo $fields['how_step_1']; ?></p>
-      <p>- <?php echo $fields['how_step_2']; ?></p>
-      <p>- <?php echo $fields['how_step_3']; ?></p>
-
+    <ul>
+       <li><p>- <?php echo $fields['how_step_1']; ?></p></li>
+       <li><p>- <?php echo $fields['how_step_2']; ?></p></li>
+       <li><p>- <?php echo $fields['how_step_3']; ?></p></li>
+    </ul>
       <a href="#" class="button small">Till kassarna!</a>
   </div>
 
