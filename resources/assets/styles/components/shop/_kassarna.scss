@@ -25,6 +25,7 @@
   @include bp(small) {
     flex-direction: column;
     align-items: center;
+    padding: 0 15px;
   };
 }
 
@@ -50,6 +51,8 @@
   letter-spacing: 5px;
   @include bp(small) {
     text-align: center;
+    font-size: 47px;
+    width: 300px;
   };
 }
 .woocommerce .products ul, .woocommerce ul.products {
@@ -70,12 +73,14 @@
   }
 
   p {
-    width: 325px;
+    width: 320px;
     height: 80px;
     font-family: $paragraph;
     font-size: 18px;
     @include bp(small) {
+      width: 300px;
       text-align: center;
+      margin-bottom: 10px;
     }
   }
 
@@ -87,7 +92,9 @@
     width: 100%;
     @include bp(small) {
       justify-content: center;
-      width: 340px;
+      width: 290px;
+      margin: 0 auto;
+      padding-top: 5px;
     };
 
     img {
@@ -101,6 +108,8 @@
       height: 60px;
       @include bp(small) {
         text-align: left;
+        font-size: 15px;
+        width: 280px;
       };
     }
   }
@@ -112,19 +121,24 @@
     font-weight: 100;
     font-style: italic;
     @include bp(small) {
+      width: 300px;
       text-align: center;
+      padding: 0 15px;
     };
   }
 
 }
 
 .woocommerce ul.products li.product .price {
-  height: 40px;
+  height: auto;
   font-family: $paragraph;
   font-size: 30px;
   font-weight: bold;
   color: $price-green;
   margin-bottom: 0;
+  @include bp(small) {
+    font-size: 25px;
+  };
 }
 
 
