@@ -8,7 +8,8 @@
   margin: 1rem;
   padding: 1rem;
   @include bp(small) {
-    width: 70vw;
+    padding: 0;
+    width: 100%;
     margin: 0;
     justify-content: center;
     text-align: center;
@@ -29,6 +30,7 @@
     margin: 1rem;
 
     @include bp(small) {
+      margin: 0;
       font-size: $text-medium;
     }
   }
