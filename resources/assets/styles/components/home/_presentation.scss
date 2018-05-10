@@ -140,24 +140,15 @@
       @include bp(small) {
         text-align: center;
       }
-      h5 {
-        font-family: $display;
-        font-size: $text-medium;
-        @include bp(large) {
-          font-size: 2.5rem;
-        }
-      }
       p {
         font-family: $paragraph;
         font-weight: $bodyWeight;
         min-width: 200px;
-        font-size: 1rem;
         @include bp(small) {
           max-width: 350px;
         }
         @include bp(large) {
           max-width: 400px;
-          font-size: 1.25rem;
         }
       }
     }

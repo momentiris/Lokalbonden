@@ -51,11 +51,11 @@ $image_hero = $fields['background_image_1'];
       </div><!-- symbols_wrap -->
       <div class="presentation_content_text_wrap">
         <div class="text_inner_wrap">
-            <h5>Enkelt</h5>
+            <h3>Enkelt</h3>
             <p> <?php echo $fields['presentation_content']; ?>  </p>
         </div><!-- text_inner_wrap -->
         <div class="text_inner_wrap">
-            <h5>Gott</h5>
+            <h3>Gott</h3>
             <p> <?php echo $fields['presentation_content']; ?>  </p>
         </div><!-- text_inner_wrap -->
       </div> <!-- presentation_content_text_wrap -->
@@ -73,7 +73,7 @@ $image_hero = $fields['background_image_1'];
       <svg class="bridge_svg" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 20.13">
         <path fill="none" stroke-miterlimit="10" d="M0 19.565s22.292-21.5 43.273-14.5 26.226 16.598 66.221 6.549c39.995-10.049 64.91-8.549 85.235 2.451s60.976-21.303 93.759-10.401c32.782 10.901 49.829 17.401 83.924 2.901"/>
         </svg>
-      <h1 class="bridge_text"><?php echo $fields['bridge_text']; ?></h1>
+      <h2 class="bridge_text"><?php echo $fields['bridge_text']; ?></h2>
       <svg class="bridge_svg" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 20.13">
         <path fill="none" d="M0 19.565s22.292-21.5 43.273-14.5 26.226 16.598 66.221 6.549c39.995-10.049 64.91-8.549 85.235 2.451s60.976-21.303 93.759-10.401c32.782 10.901 49.829 17.401 83.924 2.901"/>
       </svg>
@@ -82,16 +82,16 @@ $image_hero = $fields['background_image_1'];
 </div><!-- bridge_wrap -->
 
 <div class="shop_section_wrap" style="background-image: url('<?php echo $fields['shop_section_background']; ?>')">
-  <h1><?php echo $fields['shop_header']; ?></h1>
+  <h2><?php echo $fields['shop_header']; ?></h2>
   <div class="product_inner">
     <div class="featured_product">
-      <h1><?php echo $fields['product_1_name']; ?></h1>
+      <h3><?php echo $fields['product_1_name']; ?></h3>
       <p><?php echo $fields['product_1_description']; ?></p>
       <a href="#" class="button small">Beställ nu!</a>
     </div>
     <img class="shop_svg" src="/themes/lokalbonden/assets/images/svg/wobbly_kassarna.svg" alt="">
     <div class="featured_product">
-      <h1><?php echo $fields['product_2_name']; ?></h1>
+      <h3><?php echo $fields['product_2_name']; ?></h3>
       <p><?php echo $fields['product_2_description']; ?></p>
       <a href="#" class="button small">Beställ nu!</a>
     </div>
@@ -101,7 +101,7 @@ $image_hero = $fields['background_image_1'];
 
 <div class="info_section_wrap">
   <div class="howto_content">
-    <h1><?php echo $fields['how_header']; ?></h1>
+    <h2><?php echo $fields['how_header']; ?></h2>
     <ul>
       <li><p>- <?php echo $fields['how_step_1']; ?></p></li>
       <li><p>- <?php echo $fields['how_step_2']; ?></p></li>
