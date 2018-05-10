@@ -10,7 +10,7 @@
   @include bp(small) {
     background-size: 30%;
     background-position:  right bottom;
-    height: 60vh;
+    height: auto;
     align-items: flex-start;
   }
 
@@ -30,17 +30,18 @@
       }
     }
     @include bp(small) {
-      height: 60vh;
+      height: auto;
       padding: 1rem;
       justify-content: flex-start;
     }
     h1 {
       font-size: $text-larger;
       width: 100%;
-      text-align: center;
+      text-align: left;
       @include bp(small) {
         font-size: $text-large;
-        margin: 1rem;
+        text-align: center;
+
       }
     }
     p {
@@ -54,6 +55,10 @@
     a {
       margin-left: 1rem;
       width: 150px;
+      @include bp(small) {
+        margin-bottom: 1rem;
+        margin-left: 1.5rem;
+      }
     }
   }
 }
