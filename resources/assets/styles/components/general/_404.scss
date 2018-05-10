@@ -20,7 +20,6 @@
   height: 320px;
   padding: 15px;
   color: $white;
-  background-color: rgba(42, 42, 42, 0.51);
 
 
   h1 {
@@ -34,12 +33,14 @@
 
   p {
     padding-left: 10px;
-    font-size: 25px;
+    font-size: 45px;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.83);
+    color: $white;
   }
 
   .button {
     width: auto;
+    background-color: rgba(255, 255, 255, 0.8);
   }
 
 
