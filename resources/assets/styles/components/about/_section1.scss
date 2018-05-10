@@ -20,7 +20,7 @@
     }
     p{
       font-family: $paragraph;
-      font-size: $text-small-medium;
+      font-size: $text-p;
       @include bp(small){
         text-align: center;
       }

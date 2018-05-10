@@ -76,7 +76,7 @@
     width: 320px;
     height: 80px;
     font-family: $paragraph;
-    font-size: 18px;
+    font-size: $text-p;
     @include bp(small) {
       width: 300px;
       text-align: center;
