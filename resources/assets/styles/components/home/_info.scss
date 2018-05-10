@@ -34,8 +34,7 @@
       padding: 1rem;
       justify-content: flex-start;
     }
-    h1 {
-      font-size: $text-larger;
+    h2 {
       width: 100%;
       text-align: left;
       @include bp(small) {
