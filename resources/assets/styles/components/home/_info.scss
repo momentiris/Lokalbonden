@@ -27,6 +27,8 @@
     }
     h1 {
       font-size: 5vw;
+      width: 100%;
+      text-align: center;
       @include bp(small) {
         font-size: $text-larger;
       }
