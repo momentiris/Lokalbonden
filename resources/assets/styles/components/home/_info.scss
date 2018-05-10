@@ -26,20 +26,20 @@
       list-style: none;
     }
     @include bp(small) {
-<<<<<<< HEAD
+
       height: 60vh;
       align-items: center;
     }
     h1 {
       font-size: $text-larger;
-=======
+
       height: 80vh;
     }
     h1 {
       font-size: 5vw;
       width: 100%;
       text-align: center;
->>>>>>> master
+
       @include bp(small) {
 
       }
