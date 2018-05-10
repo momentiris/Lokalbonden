@@ -69,3 +69,7 @@
 .woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce-cart .wc-proceed-to-checkout a.checkout-button, .woocommerce-checkout .wc-proceed-to-checkout a.checkout-button, .return-to-shop .wc-backward, .woocommerce button.button.alt {
   @extend .button;
 }
+//Prel set för footer
+.woocommerce{
+  min-height: 31vh;
+}

@@ -33,6 +33,9 @@
 .after-cart {
   display: flex;
   justify-content: space-between;
+  @include bp(small) {
+    flex-direction: column;
+  };
 }
 
 .addons {
