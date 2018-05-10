@@ -26,13 +26,11 @@
       align-self: center;
     }
   }
-  h1 {
-    font-size: $text-large;
+  h3 {
     margin: 1rem;
 
     @include bp(small) {
       margin: 0;
-      font-size: $text-medium;
     }
   }
   p {
@@ -40,9 +38,9 @@
     font-family: $paragraph;
     font-weight: $bodyWeight;
     max-width: 80%;
+    padding: 1rem 0;
 
     @include bp(large) {
-      font-size: 1.25rem;
       min-height: 200px;
     }
   }

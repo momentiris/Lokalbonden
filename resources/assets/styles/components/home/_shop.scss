@@ -15,8 +15,7 @@
     padding: 1rem;
     background-position: 0%;
   }
-  h1 {
-    font-size: $text-larger;
+  h2 {
     @include bp(small) {
       font-size: 3rem;
       margin-bottom: 1rem;

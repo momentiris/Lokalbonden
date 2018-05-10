@@ -34,9 +34,8 @@
     z-index: 1;
 
   }
-  h1 {
+  h2 {
     color: $white;
-    font-size: $text-larger;
     @include bp(small) {
       font-size: $text-large;
     }

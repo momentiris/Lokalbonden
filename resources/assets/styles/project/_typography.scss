@@ -32,12 +32,27 @@ $text-larger: 4rem;
 
 $text-p: 1.2rem;
 
-h1 {
+h1, h2, h3 {
   font-family: $display;
   color: $dark-green;
 }
 
+h2 {
+  font-size: 3.67rem;
+  @include bp(small) {
+    font-size: 3rem;
+  };
+}
+
+h3 {
+  font-size: 3rem;
+  @include bp(small) {
+    font-size: 2.5rem;
+  };
+}
+
 p {
-  font-family: $paragraph;
   color: $dark-green;
+  font-family: $paragraph;
+  font-size: $text-p;
 }
