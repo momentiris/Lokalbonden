@@ -61,7 +61,7 @@ $image_hero = $fields['background_image_1'];
       </div> <!-- presentation_content_text_wrap -->
     <div class="presentation_button_wrap">
       <a href="/om-oss" class="button small">Mer om oss!</a>
-      <a href="#" class="button small">Till butiken!</a>
+      <a href="/kassarna" class="button small">Till butiken!</a>
 
     </div><!-- presentation_button_wrap -->
   </div><!-- presentation_content_wrap -->

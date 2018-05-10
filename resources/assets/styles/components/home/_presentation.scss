@@ -38,6 +38,7 @@
       font-family: $display;
       font-size: $text-larger;
       z-index: 0;
+      text-align: center;
       // min-width: 220px;
       @include bp(small) {
         font-size: $text-large;
