@@ -13,6 +13,7 @@
   @include bp(small) {
     height: auto;
     padding: 1rem;
+    background-position: 0%;
   }
   h1 {
     font-size: $text-larger;

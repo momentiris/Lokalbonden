@@ -9,8 +9,9 @@
   padding: 1rem;
   @include bp(small) {
     padding: 0;
+    height: auto;
     width: 100%;
-    margin: 0;
+    margin: 0rem 0rem 1rem 0rem;
     justify-content: center;
     text-align: center;
   }
