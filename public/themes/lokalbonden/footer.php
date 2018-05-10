@@ -3,7 +3,7 @@
     <section class="footer-section">
 
       <div class="col-1">
-        <h1>En familjär matkasse <br> För dig och för miljön!</h1>
+        <h1 class="footer-slogan">En familjär matkasse <br> För dig och för miljön!</h1>
       </div>
 
       <div class="col-2">

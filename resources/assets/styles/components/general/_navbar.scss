@@ -23,6 +23,7 @@
   z-index: 2;
   @include bp(small) {
     flex-direction: column;
+      height: 0;
   };
 
   &::before {

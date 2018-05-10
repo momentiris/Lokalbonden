@@ -139,8 +139,6 @@ add_filter( 'woocommerce_get_price_html', 'sv_change_product_price_display' );
 
 // CHECKOUT PAGE
 
-add_action('woocommerce_checkout_before_customer_details', 'checkout_slider');
-
 // Change stuff regarding checkout page input fields
 add_filter('woocommerce_default_address_fields', 'custom_default_address_fields', 20, 1);
 function custom_default_address_fields( $address_fields ){
@@ -230,4 +228,15 @@ function bbloomer_not_approved_delivery() {
     if ( ! (int) isset( $_POST['deliverycheck'] ) ) {
         wc_add_notice( __( 'Ni måste godkänna Lokalbondens användarvillkor för att gå vidare med köpet' ), 'error' );
     }
+}
+
+
+
+add_filter( 'wc_stripe_payment_icons', 'change_my_icons' );
+function change_my_icons( $icons ) {
+        // var_dump( $icons ); to show all possible icons to change.
+    $icons['visa'] = '<img src="/mu-plugins/woocommerce/assets/images/icons/credit-cards/visa.svg" style="width: 25px;"/>';
+    $icons['mastercard'] = '<img src="/mu-plugins/woocommerce/assets/images/icons/credit-cards/mastercard.svg" style="width: 25px;"/>';
+    $icons['amex'] = '<img src="/mu-plugins/woocommerce/assets/images/icons/credit-cards/amex.svg" style="width: 25px;" />';
+    return $icons;
 }

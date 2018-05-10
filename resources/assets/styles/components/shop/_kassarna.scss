@@ -21,7 +21,6 @@
   flex-direction: row;
   width: 100%;
   height: auto;
-  background-image: url('../../../../../public/themes/lokalbonden/media/white.png');
 
   @include bp(small) {
     flex-direction: column;

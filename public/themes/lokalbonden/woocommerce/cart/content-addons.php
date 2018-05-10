@@ -23,6 +23,7 @@ if (! defined('ABSPATH')) {
 if ($addon_products):
 
   if ($addon_products->have_posts()) : ?>
+
 <div class="addons">
   <h2>Tillvalsprodukter</h2>
   <div class="addons-content">

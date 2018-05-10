@@ -1,6 +1,7 @@
 footer {
   display: flex;
   flex-direction: column;
+
   p {
     color: $white;
   }
@@ -31,11 +32,13 @@ footer {
 
     @include bp(small) {
       flex-direction: column;
+      padding: 10px 20px;
     }
 
-    h1 {
+    .footer-slogan {
       font-size: $text-medium;
       font-weight: $preambleWeight;
+      color: $white;
     }
   } //end .footer-section
 

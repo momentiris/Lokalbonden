@@ -14,11 +14,11 @@
     width: 100%;
 
     input {
-      border: 0.5px solid grey;
+      border: 1px solid $dark-green;
       padding-left: 10px;
       height: 40px;
       font-size: 15px;
-      border-radius: 15px 15px 15px 15px;
+      border-radius: 3px 3px 3px 3px;
     }
 
     label {
@@ -53,8 +53,8 @@
   height: 80px;
   padding: 10px;
   font-size: 15px;
-  border-radius: 15px 15px 15px 15px;
-  border: 0.5px solid grey;
+  border-radius: 3px 3px 3px 3px;
+  border: 1px solid $dark-green;
 }
 
 @media (min-width: 767px) {
@@ -97,13 +97,19 @@
 
 
 #e_deliverydate {
-  border: 0.5px solid grey;
+  border: 1px solid $dark-green;
   padding-left: 10px;
   height: 40px;
   font-size: 15px;
-  border-radius: 15px 15px 15px 15px;
+  border-radius: 3px 3px 3px 3px;
 }
 
 .terms_checkout {
   font-size: 13px;
+}
+
+.woocommerce #payment #place_order, .woocommerce-page #payment #place_order {
+  width: 100%!important;
+  float: none;
+  padding: 10px;
 }

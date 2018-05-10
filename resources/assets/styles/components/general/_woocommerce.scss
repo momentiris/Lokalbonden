@@ -31,6 +31,7 @@
 
 .checkout-menu-container {
   padding: 1rem 0;
+  width: 100%;
   .menu {
     // border-bottom: 3px solid $forest-green;
     display: flex;
@@ -67,4 +68,8 @@
 
 .woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce-cart .wc-proceed-to-checkout a.checkout-button, .woocommerce-checkout .wc-proceed-to-checkout a.checkout-button, .return-to-shop .wc-backward, .woocommerce button.button.alt {
   @extend .button;
+}
+//Prel set för footer
+.woocommerce{
+  min-height: 31vh;
 }

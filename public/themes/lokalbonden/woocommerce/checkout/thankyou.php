@@ -18,14 +18,15 @@
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
-}
-?>
+} ?>
 
 <div class="woocommerce-order">
 
-	<?php if ( $order ) : ?>
+	 <?php do_action('woocommerce_before_order');
 
-		<?php if ( $order->has_status( 'failed' ) ) : ?>
+   if ( $order ) :
+
+		if ( $order->has_status( 'failed' ) ) : ?>
 
 			<p class="woocommerce-notice woocommerce-notice--error woocommerce-thankyou-order-failed"><?php _e( 'Unfortunately your order cannot be processed as the originating bank/merchant has declined your transaction. Please attempt your purchase again.', 'woocommerce' ); ?></p>
 
