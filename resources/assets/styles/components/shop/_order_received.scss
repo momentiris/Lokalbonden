@@ -34,8 +34,15 @@
 
 .woocommerce-thankyou-order-details  {
 }
+
 .woocommerce ul.order_details {
-  margin: 1rem 1rem 1.5rem 1rem;
+  display: flex;
+  flex-direction: row;
+  @include bp(small) {
+    flex-direction: column;
+    width: 73vw;
+    justify-content: center;
+  }
 
 }
 

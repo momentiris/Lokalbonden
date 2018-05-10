@@ -1,5 +1,13 @@
-.woocommerce-cart .subpageTitle {
+.woocommerce-cart .subpageTitle, .woocommerce-checkout .subpageTitle {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.woocommerce-cart .subpageTitle{
   background-image: url('/themes/lokalbonden/media/bg_2.jpg');
+}
+
+.woocommerce-checkout .subpageTitle {
+  background-image: url('/themes/lokalbonden/media/bg_1.jpg');
 }
 
 .woocommerce-message {
