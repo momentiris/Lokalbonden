@@ -34,8 +34,7 @@ do_action('woocommerce_before_main_content');
 
 ?>
 
-
-<header class="woocommerce-products-header">
+<header class="woocommerce-products-header" style="background-image: url('<?php echo get_field('subpage_header', 32)['url'] ?>')">
   <?php if (apply_filters('woocommerce_show_page_title', true)) : ?>
     <h1 class="woocommerce-products-header__title title"><?php woocommerce_page_title(); ?></h1>
   <?php endif; ?>
@@ -66,6 +65,8 @@ $args = [
       ]
  ]
 ];
+
+
 $featured_products = new WP_Query( $args );
 
 if ($featured_products->have_posts()) {
