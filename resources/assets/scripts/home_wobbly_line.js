@@ -1,7 +1,8 @@
 export default (function() {
   if (window.location.pathname == "/") {
     const wobblyLine = document.querySelector('.wobbly_path');
-    const targetSection = document.querySelector('.presentation_wrap');
+    const targetSection = document.querySelector('.symbols_wrap');
+    const symbols = Array.from(document.querySelectorAll(".symbols"));
 
     var options = {
       root: null,
@@ -15,8 +16,13 @@ export default (function() {
     * @return {[null]}
     */
     function intersectionCallback(element) {
-      if (element[0].intersectionRatio === 1)
+      console.log(element[0].intersectionRatio);
+      if (element[0].intersectionRatio === 1) {
         wobblyLine.classList.add('wobble--active');
+        symbols.forEach(symbol => {
+          symbol.classList.add("symbols--active");
+        });
+      }
     }
 
     var observer = new IntersectionObserver(intersectionCallback, options);
