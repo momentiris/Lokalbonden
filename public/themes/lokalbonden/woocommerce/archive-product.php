@@ -63,7 +63,8 @@ $args = [
           'terms'     => array('21'),
           'operator'  => 'IN',
       ]
- ]
+  ],
+  'order' => 'asc',
 ];
 
 
