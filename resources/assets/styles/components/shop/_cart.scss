@@ -60,13 +60,14 @@
     img {
       margin: 0.5rem 0;
     }
-    p {
-      // font-family: $display;
-      font-style: 30px;
-
+    #addon-product-text-name {
+      font-size: 1.6em;
+      font-family: $display;
     }
     p:last-of-type {
+      font-family: $display;
       font-weight: bold;
+      font-size: 1.5em;
     }
   }
 }
@@ -98,8 +99,10 @@ body.page-id-34 .woocommerce-message {
     display: none!important;
 }
 
+.woocommerce-cart {
 .product-name, .product-price, .product-quantity, .product-subtotal {
   font-family: $display;
+}
 }
 
 .shop_table.shop_table_responsive.cart.woocommerce-cart-form__contents{

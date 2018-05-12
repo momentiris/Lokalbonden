@@ -20,7 +20,6 @@
   a {
     width: 150px;
     margin-top: auto;
-    margin-right: 2.5rem;
     @include bp(small) {
       margin: 1rem;
       align-self: center;

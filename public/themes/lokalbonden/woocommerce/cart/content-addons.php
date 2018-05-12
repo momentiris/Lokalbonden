@@ -35,7 +35,7 @@ if ($addon_products):
         <a href="?add-to-cart=<?php echo $product->get_id(); ?>">
           <div class="addon-product">
           <?php echo $product->get_image(); ?>
-          <p><?php echo $product->get_name() ?></p>
+          <p id="addon-product-text-name"><?php echo $product->get_name() ?></p>
           <p><?php echo $product->get_price().' kr' ?></p>
         </div>
         </a>

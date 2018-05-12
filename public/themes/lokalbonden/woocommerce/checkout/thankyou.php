@@ -40,7 +40,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<?php else : ?>
 
 			<p class="woocommerce-notice woocommerce-notice--success woocommerce-thankyou-order-received"><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', __( 'Thank you. Your order has been received.', 'woocommerce' ), $order ); ?></p>
-
+      <p style="text-align: center">En bekräftelse per mail skickas även till er inkom kort</p> <br><br>
 			<ul class="woocommerce-order-overview woocommerce-thankyou-order-details order_details">
 
 				<li class="woocommerce-order-overview__order order">

@@ -5,6 +5,7 @@
   margin: 1rem;
 
 }
+
 .woocommerce-order {
   font-family: $paragraph;
   padding: 1rem;
@@ -17,6 +18,11 @@
     flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
+    a {
+      text-decoration: none;
+      pointer-events: none;
+      color: black;
+    }
 
   }
 

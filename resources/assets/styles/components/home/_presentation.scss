@@ -144,6 +144,7 @@
         font-family: $paragraph;
         font-weight: $bodyWeight;
         min-width: 200px;
+        margin-bottom: 20px;
         @include bp(small) {
           max-width: 350px;
         }
@@ -152,29 +153,10 @@
           text-align: justify;
         }
       }
-    }
 
-    .presentation_button_wrap {
-      width: 75vw;
-      display: flex;
-      justify-content: center;
-      margin-top: 1rem;
-
-
-      @include bp(small) {
-        width: 100vw;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin: 1rem;
-      }
-      @include bp(large) {
-        width: 50vw;
-        justify-content: space-around;
-      }
       a {
-        width: 280px;
-        margin: 0.5rem 1rem 0.5rem 1rem;
+        width: 260px;
+        margin-bottom: 10px;
       }
     }
   }
