@@ -5,6 +5,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+
+
+  a {
+    color: $white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.69);
+    border-color: $white;
+    transform: translateY(50px);
+  }
+  a:hover {
+    color: $white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.69);
+  }
+
   .home-title {
     text-align: center;
     font-family: $display;

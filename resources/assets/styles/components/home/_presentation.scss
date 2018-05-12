@@ -149,6 +149,7 @@
         }
         @include bp(large) {
           max-width: 400px;
+          text-align: justify;
         }
       }
     }

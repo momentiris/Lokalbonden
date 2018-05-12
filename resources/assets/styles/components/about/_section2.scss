@@ -49,6 +49,7 @@
       font-family: $paragraph;
       font-size: $text-p;
       padding: 0px 50px 0px 0px;
+      text-align: justify;
       @include bp(small){
         padding: 0;
         text-align: center;

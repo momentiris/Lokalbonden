@@ -18,6 +18,7 @@
 
     label {
       font-family: $paragraph;
+
     }
   }
 
@@ -34,13 +35,14 @@
   justify-content: center;
   margin: auto;
   margin-left: 10px;
-  font-weight: lighter;
-  font-size: 15px;
+  font-weight: bold;
+  font-size: 22px;
 }
 
 #order_comments_field {
+  font-family: $display;
+  font-size: 1.9em;
   font-weight: bold;
-  font-size: 1.17em;
 }
 
 #order_comments {

@@ -19,6 +19,7 @@
     p{
       font-family: $paragraph;
       font-size: $text-p;
+      text-align: justify;
       @include bp(small){
         text-align: center;
       }

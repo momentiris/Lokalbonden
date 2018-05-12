@@ -12,7 +12,7 @@ $image_hero = $fields['background_image_1'];
 ?>
 <div class="swiper__outer">
   <h1 class="home-title title" ><?php echo $fields['header_text'] ?></h1>
-
+    <a href="/kassarna" class="button small">Till butiken!</a>
 <div class="swiper-container">
   <div class="swiper-wrapper">
     <div class="swiper-slide " style="background-image: url('<?php the_field('background_image_1'); ?>')">
@@ -87,13 +87,13 @@ $image_hero = $fields['background_image_1'];
     <div class="featured_product">
       <h3><?php echo $fields['product_1_name']; ?></h3>
       <p><?php echo $fields['product_1_description']; ?></p>
-      <a href="#" class="button small">Beställ nu!</a>
+      <a href="/kassarna" class="button small">Beställ nu!</a>
     </div>
     <img class="shop_svg" src="/themes/lokalbonden/assets/images/svg/wobbly_kassarna.svg" alt="">
     <div class="featured_product">
       <h3><?php echo $fields['product_2_name']; ?></h3>
       <p><?php echo $fields['product_2_description']; ?></p>
-      <a href="#" class="button small">Beställ nu!</a>
+      <a href="/kassarna" class="button small">Beställ nu!</a>
     </div>
   </div>
 
@@ -107,7 +107,7 @@ $image_hero = $fields['background_image_1'];
       <li><p>- <?php echo $fields['how_step_2']; ?></p></li>
       <li><p>- <?php echo $fields['how_step_3']; ?></p></li>
     </ul>
-      <a href="#" class="button small">Till kassarna!</a>
+      <a href="/kassarna" class="button small">Till kassarna!</a>
   </div>
 
 

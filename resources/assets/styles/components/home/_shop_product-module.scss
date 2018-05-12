@@ -39,8 +39,10 @@
     font-weight: $bodyWeight;
     max-width: 80%;
     padding: 1rem 0;
+    text-align: center;
 
     @include bp(large) {
+      text-align: justify;
       min-height: 200px;
     }
   }

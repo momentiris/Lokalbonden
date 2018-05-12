@@ -60,6 +60,11 @@
     img {
       margin: 0.5rem 0;
     }
+    p {
+      // font-family: $display;
+      font-style: 30px;
+
+    }
     p:last-of-type {
       font-weight: bold;
     }
@@ -91,4 +96,24 @@
 
 body.page-id-34 .woocommerce-message {
     display: none!important;
+}
+
+.product-name, .product-price, .product-quantity, .product-subtotal {
+  font-family: $display;
+}
+
+.shop_table.shop_table_responsive.cart.woocommerce-cart-form__contents{
+  font-size: 30px;
+}
+
+.woocommerce-cart-form__cart-item.cart_item {
+  font-size: 24px;
+  font-weight: bolder;
+}
+
+.woocommerce a.remove {
+  color: $price-green!important;
+}
+.woocommerce a.remove:hover {
+  background-color: $price-green!important;
 }
