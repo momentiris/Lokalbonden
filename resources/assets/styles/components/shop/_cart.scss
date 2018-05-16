@@ -123,3 +123,7 @@ body.page-id-34 .woocommerce-message {
 .woocommerce a.remove:hover {
   background-color: $price-green!important;
 }
+
+.woocommerce-cart td.product-thumbnail, .woocommerce-cart td.product-name {
+    pointer-events: none;
+}

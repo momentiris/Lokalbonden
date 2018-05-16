@@ -126,7 +126,7 @@ function sv_change_product_price_display($price)
     global $product;
     $id = $product->get_id();
     if ($id === 44) {
-      $price = 'Från '.$price.' per kasse';
+      $price = $price.' per kasse';
       return $price;
     } elseif ($id === 50) {
       $price = 'Testa-på pris '.$price;

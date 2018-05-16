@@ -57,7 +57,7 @@ $image_hero = $fields['background_image_1'];
         </div><!-- text_inner_wrap -->
         <div class="text_inner_wrap">
             <h3>Gott</h3>
-            <p> <?php echo $fields['presentation_content']; ?>  </p>
+            <p> <?php echo $fields['presentation_content_right']; ?>  </p>
             <a href="/kassarna" class="button small">Till butiken!</a>
         </div><!-- text_inner_wrap -->
       </div> <!-- presentation_content_text_wrap -->
