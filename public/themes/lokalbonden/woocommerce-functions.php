@@ -126,7 +126,7 @@ function sv_change_product_price_display($price)
     global $product;
     $id = $product->get_id();
     if ($id === 44) {
-      $price = 'Från '.$price.' per kasse';
+      $price = $price.' per kasse';
       return $price;
     } elseif ($id === 50) {
       $price = 'Testa-på pris '.$price;
@@ -212,7 +212,7 @@ function bbloomer_add_checkout_tickbox() {
 
 <p class="form-row terms">
 <input type="checkbox" class="input-checkbox" name="deliverycheck" id="deliverycheck">
-<label for="deliverycheck" class="checkbox terms_checkout">Jag är över 18 år & har läst och godkänner <a href="http://localhost:8888/anvandarvillkor/" target="_blank">villkoren</a> <abbr class="required" title="required">*</abbr></label>
+<label for="deliverycheck" class="checkbox terms_checkout">Jag är över 18 år & har läst och godkänner <a href="https://www.lokalbonden.se/anvandarvillkor/" target="_blank">villkoren</a> <abbr class="required" title="required">*</abbr></label>
 </p>
 
 
