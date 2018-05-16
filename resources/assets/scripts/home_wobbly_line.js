@@ -16,7 +16,6 @@ export default (function() {
     * @return {[null]}
     */
     function intersectionCallback(element) {
-      console.log(element[0].intersectionRatio);
       if (element[0].intersectionRatio === 1) {
         wobblyLine.classList.add('wobble--active');
         symbols.forEach(symbol => {

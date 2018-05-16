@@ -31,6 +31,9 @@
 .woocommerce .a.remove {
   width: auto;
 }
+.woocommerce-cart td.product-thumbnail, .woocommerce-card td.product-name {
+  pointer-events: none;
+}
 
 .after-cart {
   display: flex;

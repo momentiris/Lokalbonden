@@ -1,4 +1,3 @@
-import symbols from "./home_symbols.js";
 import hamburger from './hamburger.js';
 import './menu.js';
 import './backgroundswap.js';
