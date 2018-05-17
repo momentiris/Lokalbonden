@@ -11,6 +11,16 @@
 
     <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDS85uYpb34YgtRJIHw2dMxJR7tfdauJ0g"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119399611-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-119399611-1');
+    </script>
+
 
 </head>
 <body <?php body_class(); ?>>
