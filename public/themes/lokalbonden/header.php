@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="theme-color" content="#204638">
 
+
     <?php wp_head(); ?>
+
 
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 
@@ -21,7 +23,7 @@
       gtag('config', 'UA-119399611-1');
     </script>
 
-
+  <meta name="google-site-verification" content="p4vr-QJbGMeSm_qNZerw1F76Nzvv2OxcfTcuy9BnN28" />
 </head>
 <body <?php body_class(); ?>>
   <nav role="navigation" class="nav">
