@@ -1,6 +1,6 @@
 .second_section{
   display: flex;
-  padding: 50px 0px 50px 50px;
+  padding: 50px 0px 100px 50px;
   @include bp(small){
     flex-direction: column;
     padding: 50px 50px 50px 50px;
