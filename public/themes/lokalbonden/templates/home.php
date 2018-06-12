@@ -78,7 +78,7 @@ $image_hero = $fields['background_image_1'];
   </div><!-- bridge_content -->
 </div><!-- bridge_wrap -->
 
-<div class="shop_section_wrap" style="background-image: url('<?php echo $fields['shop_section_background']; ?>')">
+<div class="shop_section_wrap">
   <h2><?php echo $fields['shop_header']; ?></h2>
   <div class="product_inner">
     <div class="featured_product">

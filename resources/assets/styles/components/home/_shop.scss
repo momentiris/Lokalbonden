@@ -42,7 +42,7 @@
   position: absolute;
 
   stroke: $forest-green;
-  z-index: 10;
+  z-index: 1;
   @include bp(small) {
     display: none;
   }
