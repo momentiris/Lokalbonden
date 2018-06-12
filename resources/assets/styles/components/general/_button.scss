@@ -82,4 +82,67 @@
     font-size: 2rem;
     padding: 0.5rem;
   }
+
+  @include bp(small) {
+
+    &:before,
+    &:after {
+      transition: none;
+    }
+      &:hover {
+        background-color: inherit;
+        border-color: inherit;
+        color: inherit;
+          &:before {
+            width: 0 !important;
+          }
+        &:after {
+          height: 0 !important;
+        }
+      }
+
+      &:active {
+        background-color: transparent;
+        border-color: transparent;
+        color: $light-green;
+          &:before {
+            width: 100% !important;
+          }
+        &:after {
+          height: 100% !important;
+        }
+      }
+  }
+}
+
+@media (hover:none) {
+    button {
+      &:before,
+      &:after {
+        transition: none;
+      }
+        &:hover {
+          background-color: inherit;
+          border-color: inherit;
+          color: inherit;
+            &:before {
+              width: 0 !important;
+            }
+          &:after {
+            height: 0 !important;
+          }
+        }
+
+        &:active {
+          background-color: transparent;
+          border-color: transparent;
+          color: $light-green;
+            &:before {
+              width: 100% !important;
+            }
+          &:after {
+            height: 100% !important;
+          }
+        }
+    }
 }

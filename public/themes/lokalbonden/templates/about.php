@@ -48,12 +48,6 @@ $aboutFields = get_fields();
       </div>
     </div>
 
-    <div class="third_section">
-      <div class="button_wrap">
-        <button class="button">Hitta oss</button>
-      </div>
-    </div>
-
   </div>
 </div>
 

@@ -12,8 +12,7 @@
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 
     <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDS85uYpb34YgtRJIHw2dMxJR7tfdauJ0g"></script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- Global site tag (gtag.js) - Google Analytics CHRISTOPHER -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119399611-1"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -23,7 +22,16 @@
       gtag('config', 'UA-119399611-1');
     </script>
 
-  <meta name="google-site-verification" content="p4vr-QJbGMeSm_qNZerw1F76Nzvv2OxcfTcuy9BnN28" />
+    <!-- Global site tag (gtag.js) - Google Analytics MARTIN -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120675182-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-120675182-1');
+    </script>
+
 </head>
 <body <?php body_class(); ?>>
   <nav role="navigation" class="nav">
