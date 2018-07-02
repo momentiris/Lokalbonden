@@ -30,10 +30,10 @@ export default (function() {
       observer.observe(targetSection);
     })
 
-  } else {
+  } else if (window.location.pathname == "/" && window.innerWidth < 450) {
 
     symbols.forEach(symbol => symbol.classList.add('symbols--active'))
-    wobblyLine.classList.add('wobble--active');
+
 
   }
 })();
