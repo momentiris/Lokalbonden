@@ -1,5 +1,4 @@
 .swiper__outer {
-  background-image: url('/themes/lokalbonden/media/bg_3.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -11,6 +10,9 @@
   align-items: center;
   flex-direction: column;
 
+  @include bp(small) {
+    background-image: url('/themes/lokalbonden/media/bg_3.jpg');
+  }
 
   a {
     color: $white;
