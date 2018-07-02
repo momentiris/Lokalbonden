@@ -34,7 +34,7 @@
 
 </head>
 <body <?php body_class(); ?>>
-  <img class="header-logotype" src="/themes/lokalbonden/media/logotype-white.svg" alt="">
+  <a href="/"><img class="header-logotype" src="/themes/lokalbonden/media/logotype-white.svg" alt=""></a>
   <nav role="navigation" class="nav">
     <button class="hamburger hamburger--spin" type="button">
       <span class="hamburger-box">

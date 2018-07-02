@@ -1,0 +1,136 @@
+.first_section_bags {
+  display: flex;
+  padding: 50px 0px 50px 50px;
+  @include bp(small){
+    flex-direction: column;
+    padding: 40px 40px 25px 40px;
+  }
+  .left_column_bags_first{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: $forest-green;
+    flex: 3;
+    h2{
+      padding-bottom: 30px;
+      text-align: center;
+      @include bp(small){
+        padding-bottom: 20px;
+      }
+    }
+    p{
+      font-family: $paragraph;
+      font-size: $text-p;
+      text-align: justify;
+      @include bp(small){
+        text-align: center;
+      }
+    }
+
+    img {
+      display: none;
+      @include bp(small){
+        height: 150px;
+        display: block;
+        margin-bottom: 30px;
+      }
+    }
+  }
+  .right_column_bags_first{
+    padding: 0px 20px 0px 20px;
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    img {
+      margin-top: 70px;
+      height: 200px;
+      @include bp(small){
+        display: none;
+      }
+    }
+  }
+}
+
+
+// SECOND SECTION
+.second_section_bags{
+  display: flex;
+  padding: 50px 0px 100px 50px;
+  @include bp(small){
+    flex-direction: column;
+    padding: 25px 40px 40px 40px;
+  }
+
+  .left_column_bags_second{
+    padding: 0px 20px 0px 20px;
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    @include bp(small){
+      order: 2;
+    }
+    // Desktop image
+    img {
+      margin-top: 70px;
+      height: 200px;
+      display: block;
+      @include bp(small){
+        display: none;
+      }
+    }
+  }
+  .right_column_bags_second{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    color: $forest-green;
+    flex: 3;
+    @include bp(small){
+      order: 1;
+    }
+    h2{
+      padding-bottom: 30px;
+      text-align: center;
+      @include bp(small){
+        padding-bottom: 20px;
+      }
+    }
+    p{
+      font-family: $paragraph;
+      font-size: $text-p;
+      padding: 0px 50px 0px 0px;
+      text-align: justify;
+      @include bp(small){
+        padding: 0;
+        text-align: center;
+      }
+    }
+  }
+
+  // mobile image
+  img {
+    display: none;
+    @include bp(small){
+      height: 150px;
+      display: block;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.section_border_bags {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include bp(small){
+    display: none;
+  }
+}
