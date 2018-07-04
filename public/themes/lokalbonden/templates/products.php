@@ -7,9 +7,12 @@ get_header();
 $productFields = get_fields();
 ?>
 
-<header class="woocommerce-products-header" style="background-image: url('<?php echo $fields['presentation_image']['sizes']['large']; ?>')">
+<div class="header" style="background-image:url('<?php echo $productFields['page_title_background']; ?>')">
+  <div class="header_text">
     <h1 class="title"><?php echo $productFields['page_title'] ?></h1>
-</header>
+    <p class="title"><?php echo $productFields['page_title_subtitle'] ?></p>
+  </div>
+</div>
 
   <div class="sections">
 
